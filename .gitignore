@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+uploads/*
+!uploads/.gitkeep
+.env
+*.db
+samood_data.db
