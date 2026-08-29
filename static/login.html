@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول | منظومة صمود للتواصل والتوظيف</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--bg-card);
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .login-logo {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #fff;
+            margin: 0 auto 20px;
+            box-shadow: 0 6px 25px rgba(0, 242, 254, 0.3);
+        }
+        .login-card h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .login-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        .error-msg {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-logo"><i class="fa-solid fa-shield-halved"></i></div>
+        <h2>صمود <span>Samood Engine</span></h2>
+        <p>تسجيل الدخول لحماية ومتابعة السيرفر السحابي أونلاين</p>
+
+        <div class="error-msg" id="login-error"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label><i class="fa-solid fa-user"></i> اسم المستخدم</label>
+                <input type="text" id="username" value="admin" required autofocus>
+            </div>
+            <div class="form-group">
+                <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px;">
+                <i class="fa-solid fa-right-to-bracket"></i> دخول إلى المنظومة
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const errDiv = document.getElementById("login-error");
+            errDiv.style.display = "none";
+
+            const formData = new FormData();
+            formData.append("username", document.getElementById("username").value);
+            formData.append("password", document.getElementById("password").value);
+
+            try {
+                const res = await fetch("/api/login", {
+                    method: "POST",
+                    body: formData
+                });
+                const data = await res.json();
+                if (res.ok && data.success) {
+                    // حفظ التوكن في الموقت المحلي والانتقال للوحة التحكم
+                    document.cookie = `samood_session=${data.token}; path=/; max-age=604800`;
+                    localStorage.setItem("samood_token", data.token);
+                    window.location.href = "/index.html";
+                } else {
+                    errDiv.innerText = data.detail || "اسم المستخدم أو كلمة المرور غير صحيحة";
+                    errDiv.style.display = "block";
+                }
+            } catch (err) {
+                errDiv.innerText = "فشل الاتصال بالسيرفر: " + err;
+                errDiv.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

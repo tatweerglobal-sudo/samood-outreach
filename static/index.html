@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظومة صمود للتواصل والتوظيف بالخارج | Samood Outreach Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الهيدر والشعار -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <div class="logo-text">
+                    <h1>صمود <span>Samood Cloud Engine</span></h1>
+                    <p>منظومة التواصل والتسويق الإلكتروني الذكي للشركات (سحابي 24/7)</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div class="system-status-pill">
+                    <span class="status-dot" id="global-status-dot"></span>
+                    <span id="global-status-text">جاري الاتصال بالسيرفر...</span>
+                </div>
+                <button class="btn btn-sm btn-outline" id="btn-logout" title="تسجيل الخروج"><i class="fa-solid fa-power-off"></i> خروج</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <!-- القائمة الجانبية (Tabs Navigation) -->
+        <nav class="sidebar">
+            <button class="nav-btn active" data-tab="dashboard">
+                <i class="fa-solid fa-gauge-high"></i> الغرفة المباشرة
+            </button>
+            <button class="nav-btn" data-tab="accounts">
+                <i class="fa-solid fa-at"></i> حسابات البريد والتدوير
+            </button>
+            <button class="nav-btn" data-tab="excel">
+                <i class="fa-solid fa-file-excel"></i> رفع وتنقية Excel
+            </button>
+            <button class="nav-btn" data-tab="templates">
+                <i class="fa-solid fa-pen-nib"></i> القوالب و Spintax
+            </button>
+            <button class="nav-btn" data-tab="settings">
+                <i class="fa-solid fa-sliders"></i> إعدادات الأمان والتوقيت
+            </button>
+            <button class="nav-btn" data-tab="server">
+                <i class="fa-solid fa-server"></i> أمان وحالة السيرفر
+            </button>
+            <button class="nav-btn" data-tab="logs">
+                <i class="fa-solid fa-list-check"></i> السجلات والتقارير
+            </button>
+        </nav>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="content-area">
+            
+            <!-- TAB 1: الغرفة المباشرة Dashboard -->
+            <section class="tab-content active" id="tab-dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card blue">
+                        <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="stat-info">
+                            <h3 id="stat-sent">0</h3>
+                            <p>تم الإرسال بنجاح</p>
+                        </div>
+                    </div>
+                    <div class="stat-card red">
+                        <div class="stat-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="stat-info">
+                            <h3 id="stat-failed">0</h3>
+                            <p>فشل / ارتداد</p>
+                        </div>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="stat-icon"><i class="fa-solid fa-user-minus"></i></div>
+                        <div class="stat-info">
+                            <h3 id="stat-unsub">0</h3>
+                            <p>طلبوا التوقف</p>
+                        </div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <div class="stat-info">
+                            <h3 id="stat-active-acc">0</h3>
+                            <p>حسابات إرسال نشطة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel control-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-play"></i> مركز التحكم بالحملة المباشرة</h2>
+                        <div class="campaign-actions">
+                            <button class="btn btn-primary" id="btn-start"><i class="fa-solid fa-play"></i> بدء الحملة</button>
+                            <button class="btn btn-warning" id="btn-pause"><i class="fa-solid fa-pause"></i> إيقاف مؤقت</button>
+                            <button class="btn btn-danger" id="btn-stop"><i class="fa-solid fa-stop"></i> إنهاء</button>
+                        </div>
+                    </div>
+                    <div class="progress-box">
+                        <div class="progress-info">
+                            <span id="progress-text">التقدم: 0 من 0 (0%)</span>
+                            <span id="countdown-text" class="pulse-text">في انتظار البدء...</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="progress-bar" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel terminal-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-terminal"></i> سجل العمليات المباشر (Live Terminal Logs)</h2>
+                        <button class="btn btn-sm btn-secondary" id="btn-clear-logs"><i class="fa-solid fa-eraser"></i> مسح الشاشة</button>
+                    </div>
+                    <div class="terminal-body" id="terminal-logs">
+                        <div class="log-line system">[النظام] مرحباً بكم في منظومة صمود لتوظيف الكوادر المصرية بالخارج. النظام جاهز للعمل.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: حسابات البريد الإلكتروني -->
+            <section class="tab-content" id="tab-accounts">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-user-plus"></i> إضافة حساب بريد رسمى جديد (Hostinger / Google / SMTP)</h2>
+                    </div>
+                    
+                    <div class="presets-bar">
+                        <span>إعدادات سريعة:</span>
+                        <button class="btn btn-sm btn-outline" id="preset-hostinger"><i class="fa-solid fa-server"></i> Hostinger Webmail</button>
+                        <button class="btn btn-sm btn-outline" id="preset-gmail"><i class="fa-brands fa-google"></i> Google Workspace / Gmail</button>
+                    </div>
+
+                    <form id="form-add-account" class="grid-form">
+                        <div class="form-group">
+                            <label>اسم المرسل الاحترافي</label>
+                            <input type="text" id="acc-sender-name" placeholder="شركة صمود للتوظيف" required>
+                        </div>
+                        <div class="form-group">
+                            <label>البريد الإلكتروني الرسمي</label>
+                            <input type="email" id="acc-email" placeholder="sales@samood.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>كلمة المرور / App Password</label>
+                            <input type="password" id="acc-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>خادم SMTP (Host)</label>
+                            <input type="text" id="acc-host" placeholder="smtp.hostinger.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>المنفذ (Port)</label>
+                            <input type="number" id="acc-port" value="465" required>
+                        </div>
+                        <div class="form-group">
+                            <label>نوع التشفير</label>
+                            <select id="acc-ssl">
+                                <option value="true">SSL / TLS (المنفذ 465 - موصى به)</option>
+                                <option value="false">STARTTLS (المنفذ 587)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>الحد الأقصى للإرسال اليومي</label>
+                            <input type="number" id="acc-limit" value="45" min="1" max="500">
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> فحص الاتصال وإضافة الحساب</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="panel mt-20">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-list"></i> الحسابات المسجلة للتدوير الآلي</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>اسم المرسل</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>خادم SMTP</th>
+                                    <th>الإرسال اليومي</th>
+                                    <th>الحالة</th>
+                                    <th>إجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody id="accounts-table-body">
+                                <tr><td colspan="6" class="text-center">جاري تحميل الحسابات...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: رفع وتنقية Excel -->
+            <section class="tab-content" id="tab-excel">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-file-arrow-up"></i> رفع ملف Excel أو CSV للشركات</h2>
+                    </div>
+                    <div class="dropzone" id="excel-dropzone">
+                        <i class="fa-solid fa-file-excel drop-icon"></i>
+                        <h3>اسحب وأسقط ملف Excel هنا أو اضغط للاختيار</h3>
+                        <p>يدعم صيغ .xlsx و .xls و .csv مع التنقية والتصحيح الآلي للأخطاء</p>
+                        <input type="file" id="excel-file-input" accept=".xlsx,.xls,.csv" hidden>
+                    </div>
+                </div>
+
+                <div class="panel mt-20 hidden" id="excel-stats-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-chart-pie"></i> تقرير تنقية وفلترة البيانات</h2>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card green">
+                            <h3 id="ex-valid">0</h3>
+                            <p>إيميلات جاهزة للإرسال</p>
+                        </div>
+                        <div class="stat-card red">
+                            <h3 id="ex-invalid">0</h3>
+                            <p>إيميلات خاطئة الصيغة</p>
+                        </div>
+                        <div class="stat-card orange">
+                            <h3 id="ex-duplicates">0</h3>
+                            <p>مكرر داخل الملف</p>
+                        </div>
+                        <div class="stat-card blue">
+                            <h3 id="ex-sent-before">0</h3>
+                            <p>مراسلون سابقاً (مستبعدون)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 4: القوالب و Spintax -->
+            <section class="tab-content" id="tab-templates">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-pen-to-square"></i> محرر قوالب الرسائل و Spintax</h2>
+                    </div>
+                    <form id="form-template">
+                        <div class="form-group">
+                            <label>عنوان القالب</label>
+                            <input type="text" id="tpl-title" placeholder="عرض خدمات صمود لقطاع المقاولات" required>
+                        </div>
+                        <div class="form-group">
+                            <label>القطاع المستهدف</label>
+                            <input type="text" id="tpl-industry" value="عام" required>
+                        </div>
+
+                        <div class="variables-bar">
+                            <span>إدراج متغير:</span>
+                            <button type="button" class="btn-tag" data-tag="{اسم_الشركة}">+ اسم الشركة</button>
+                            <button type="button" class="btn-tag" data-tag="{اسم_المسؤول}">+ اسم المسؤول</button>
+                            <button type="button" class="btn-tag" data-tag="{القطاع}">+ القطاع</button>
+                            <button type="button" class="btn-tag" data-tag="{تحية طيبة|السلام عليكم}">+ Spintax تحية</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>عنوان الرسالة (Subject Line with Spintax)</label>
+                            <input type="text" id="tpl-subject" placeholder="{استفسار بخصوص|تعاون توظيف مع} {اسم_الشركة}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>محتوى الرسالة (Email Body with Spintax)</label>
+                            <textarea id="tpl-body" rows="10" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>إرفاق ملف بروفايل الشركة (PDF)</label>
+                            <input type="file" id="tpl-attachment" accept=".pdf">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> حفظ القالب</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- TAB 5: الإعدادات والأمان -->
+            <section class="tab-content" id="tab-settings">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-shield-halved"></i> إعدادات الفواصل الزمانية والحماية من الحظر</h2>
+                    </div>
+                    <form id="form-settings" class="grid-form">
+                        <div class="form-group">
+                            <label>الحد الأدنى للتأخير العشوائي (ثواني)</label>
+                            <input type="number" id="set-delay-min" value="45" min="10">
+                        </div>
+                        <div class="form-group">
+                            <label>الحد الأقصى للتأخير العشوائي (ثواني)</label>
+                            <input type="number" id="set-delay-max" value="90" min="20">
+                        </div>
+                        <div class="form-group">
+                            <label>الحد الأقصى للرسائل في الساعة (لكل حساب)</label>
+                            <input type="number" id="set-hourly-cap" value="20" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label>الإرسال فقط خلال ساعات العمل الرسمية</label>
+                            <select id="set-working-hours">
+                                <option value="true">نعم (موصى به لحماية البريد)</option>
+                                <option value="false">لا (إرسال على مدار 24 ساعة)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>بداية ساعات العمل (بتوقيت السيرفر)</label>
+                            <input type="number" id="set-work-start" value="8" min="0" max="23">
+                        </div>
+                        <div class="form-group">
+                            <label>نهاية ساعات العمل (بتوقيت السيرفر)</label>
+                            <input type="number" id="set-work-end" value="17" min="0" max="23">
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> حفظ إعدادات الأمان</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- TAB 6: السيرفر والأمان -->
+            <section class="tab-content" id="tab-server">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-microchip"></i> حالة السيرفر السحابي وموارد النظام</h2>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card blue">
+                            <div class="stat-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="stat-info">
+                                <h3 id="srv-cpu">0%</h3>
+                                <p>استهلاك المعالج (CPU)</p>
+                            </div>
+                        </div>
+                        <div class="stat-card green">
+                            <div class="stat-icon"><i class="fa-solid fa-memory"></i></div>
+                            <div class="stat-info">
+                                <h3 id="srv-ram">0%</h3>
+                                <p>استهلاك الذاكرة (RAM)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel mt-20">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-key"></i> تغيير كلمة مرور المدير</h2>
+                    </div>
+                    <form id="form-change-pwd" class="grid-form">
+                        <div class="form-group">
+                            <label>كلمة المرور الحالية</label>
+                            <input type="password" id="pwd-old" required>
+                        </div>
+                        <div class="form-group">
+                            <label>كلمة المرور الجديدة</label>
+                            <input type="password" id="pwd-new" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-warning"><i class="fa-solid fa-lock"></i> تحديث كلمة المرور</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- TAB 7: السجلات والتقارير -->
+            <section class="tab-content" id="tab-logs">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-file-excel"></i> سجلات الحملة وتصدير التقرير النهائي</h2>
+                        <a href="/api/export-logs" class="btn btn-success" target="_blank"><i class="fa-solid fa-download"></i> تحميل تقرير Excel مفصل</a>
+                    </div>
+                    <p>يمكنك تحميل التقرير الشامل صيغة Excel يوضح حالة كل شركة مع توقيت الإرسال والتفاصيل الكاملة.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

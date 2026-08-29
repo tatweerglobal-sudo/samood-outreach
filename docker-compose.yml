@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  samood_engine:
+    build: .
+    container_name: samood_outreach_app
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./samood_data.db:/app/samood_data.db
+      - ./uploads:/app/uploads
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=Asia/Riyadh
