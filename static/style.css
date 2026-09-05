@@ -30,6 +30,59 @@ body {
     flex-direction: column;
 }
 
+/* Custom Select Dropdown Dark Glassmorphism Styling */
+select option {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+}
+
+select option:hover, select option:focus, select option:active, select option:checked {
+    background-color: #1e293b !important;
+    color: var(--accent-cyan) !important;
+}
+
+/* Custom Ultra-Premium Glowing Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(11, 15, 25, 0.8);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent-cyan), var(--accent-blue));
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+/* Modal Overlay Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.hidden {
+    display: none !important;
+}
+
 /* Header */
 .app-header {
     background: rgba(15, 23, 42, 0.8);
@@ -353,6 +406,25 @@ input:focus, select:focus, textarea:focus {
     box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
 }
 
+/* Status Pill */
+.status-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.status-pill.green {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--accent-green);
+    border: 1px solid var(--accent-green);
+}
+.status-pill.red {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+}
+
 /* Dropzone */
 .dropzone {
     border: 2px dashed var(--accent-cyan);
@@ -397,8 +469,10 @@ input:focus, select:focus, textarea:focus {
 
 .data-table td { font-size: 14px; }
 
+.mt-10 { margin-top: 10px; }
 .mt-20 { margin-top: 20px; }
-.hidden { display: none; }
+.mb-20 { margin-bottom: 20px; }
+.hidden { display: none !important; }
 .text-center { text-align: center; }
 
 .variables-bar, .presets-bar {
@@ -416,4 +490,44 @@ input:focus, select:focus, textarea:focus {
     border-radius: 6px;
     font-size: 12px;
     cursor: pointer;
+}
+
+/* Switch Toggle Buttons */
+.switch-toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+.switch-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #334155;
+    transition: .3s;
+    border-radius: 34px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+input:checked + .slider:before {
+    transform: translateX(23px);
 }
