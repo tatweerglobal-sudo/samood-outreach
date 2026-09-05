@@ -40,11 +40,26 @@
             <button class="nav-btn" data-tab="accounts">
                 <i class="fa-solid fa-at"></i> حسابات البريد والتدوير
             </button>
+            <button class="nav-btn" data-tab="email-audit" style="border: 1px solid var(--accent-cyan);">
+                <i class="fa-solid fa-vial-circle-check" style="color: var(--accent-cyan);"></i> اختبار وفحص الإيميلات 🧪
+            </button>
             <button class="nav-btn" data-tab="excel">
                 <i class="fa-solid fa-file-excel"></i> رفع وتنقية Excel
             </button>
+            <button class="nav-btn" data-tab="crm">
+                <i class="fa-solid fa-square-poll-vertical" style="color: var(--accent-gold);"></i> إدارة الصفقات و CRM
+            </button>
+            <button class="nav-btn" data-tab="warmup">
+                <i class="fa-solid fa-fire" style="color: #f97316;"></i> تسخين البريد والسمعة
+            </button>
             <button class="nav-btn" data-tab="templates">
                 <i class="fa-solid fa-pen-nib"></i> القوالب و Spintax
+            </button>
+            <button class="nav-btn" data-tab="profile">
+                <i class="fa-solid fa-file-pdf"></i> بروفايل الشركة الموحد
+            </button>
+            <button class="nav-btn" data-tab="guide">
+                <i class="fa-solid fa-book-open-reader" style="color: var(--accent-cyan);"></i> الدليل وتوجيهات الاستخدام
             </button>
             <button class="nav-btn" data-tab="settings">
                 <i class="fa-solid fa-sliders"></i> إعدادات الأمان والتوقيت
@@ -90,6 +105,58 @@
                             <h3 id="stat-active-acc">0</h3>
                             <p>حسابات إرسال نشطة</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- الأدوات التنفيذية الفاخرة 2026 -->
+                <div class="panel style-glass mb-20 p-20" style="border: 1px solid var(--accent-cyan); border-radius: 16px; background: rgba(15,23,42,0.85); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <div class="panel-header" style="border-bottom: 1px solid rgba(14,165,233,0.2); padding-bottom: 10px; margin-bottom: 15px;">
+                        <h3 style="color: var(--accent-cyan); margin: 0; font-size: 1.1rem;">
+                            <i class="fa-solid fa-toolbox" style="color: var(--accent-cyan);"></i> الأدوات التنفيذية الخارقة (Elite B2B Tools):
+                        </h3>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 15px;">
+                        
+                        <!-- Tool 1: Email Extractor -->
+                        <div style="background: rgba(30,41,59,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px;">
+                            <strong style="color: var(--accent-gold); display: block; margin-bottom: 6px;"><i class="fa-solid fa-spider"></i> مستخرج إيميلات الشركات من الدومين</strong>
+                            <div style="display: flex; gap: 6px;">
+                                <input type="text" id="tool-domain-input" placeholder="اسم الدومين (مثال: sonatrach.dz)" style="font-size: 0.85rem; padding: 6px; border-radius: 6px;">
+                                <button class="btn btn-sm btn-primary" id="btn-extract-domain" style="white-space: nowrap; border-radius: 6px;"><i class="fa-solid fa-magnet"></i> استخراج</button>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2: Interactive Form Link -->
+                        <div style="background: rgba(30,41,59,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px;">
+                            <strong style="color: #10b981; display: block; margin-bottom: 6px;"><i class="fa-solid fa-clipboard-list"></i> رابط استمارة طلب العمالة التفاعلية</strong>
+                            <button class="btn btn-sm btn-success full-width" id="btn-open-rec-form" style="border-radius: 6px;"><i class="fa-solid fa-up-right-from-square"></i> فتح نموذج طلب الكوادر للعميل</button>
+                        </div>
+
+                        <!-- Tool 3: Executive PDF Report -->
+                        <div style="background: rgba(30,41,59,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px;">
+                            <strong style="color: #a855f7; display: block; margin-bottom: 6px;"><i class="fa-solid fa-file-pdf"></i> التقرير التنفيذي المطبوع للأداء</strong>
+                            <button class="btn btn-sm btn-outline full-width" id="btn-open-exec-report" style="color: #a855f7; border-color: #a855f7; border-radius: 6px;"><i class="fa-solid fa-print"></i> تصدير التقرير التنفيذي PDF</button>
+                        </div>
+
+                        <!-- Tool 4: Person Email Permutator -->
+                        <div style="background: rgba(30,41,59,0.7); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px;">
+                            <strong style="color: var(--accent-cyan); display: block; margin-bottom: 6px;"><i class="fa-solid fa-user-gear"></i> مخمن إيميل المسؤول الفردي (Permutator)</strong>
+                            <div style="display: flex; gap: 4px;">
+                                <input type="text" id="tool-fname-input" placeholder="الأول (ahmed)" style="font-size: 0.8rem; padding: 5px; border-radius: 4px; width: 35%;">
+                                <input type="text" id="tool-lname-input" placeholder="الأخير (ali)" style="font-size: 0.8rem; padding: 5px; border-radius: 4px; width: 35%;">
+                                <button class="btn btn-sm btn-primary" id="btn-find-person-email" style="white-space: nowrap; border-radius: 4px; padding: 4px 8px;"><i class="fa-solid fa-wand-magic-sparkles"></i> خمن</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- حاوية نتائج فحص الـ MX المباشرة للدومين المستخرج -->
+                    <div id="domain-extract-results" class="hidden mt-15" style="background: rgba(30,41,59,0.9); border: 1px solid var(--accent-gold); border-radius: 12px; padding: 15px;">
+                        <h4 style="color: var(--accent-gold); margin: 0 0 10px 0; font-size: 0.95rem;">
+                            <i class="fa-solid fa-list-check"></i> نتائج استخراج وفحص سجلات البريد (MX Verification Results):
+                        </h4>
+                        <div id="domain-extract-tbody" style="display: flex; flex-direction: column; gap: 8px; max-height: 200px; overflow-y: auto;"></div>
                     </div>
                 </div>
 
@@ -151,17 +218,25 @@
                             <input type="password" id="acc-password" required>
                         </div>
                         <div class="form-group">
-                            <label>خادم SMTP (Host)</label>
+                            <label>خادم SMTP (Host الصادر)</label>
                             <input type="text" id="acc-host" placeholder="smtp.hostinger.com" required>
                         </div>
                         <div class="form-group">
-                            <label>المنفذ (Port)</label>
+                            <label>منفذ SMTP (Port الصادر)</label>
                             <input type="number" id="acc-port" value="465" required>
                         </div>
                         <div class="form-group">
-                            <label>نوع التشفير</label>
+                            <label><i class="fa-solid fa-inbox" style="color: var(--accent-cyan);"></i> خادم IMAP (Host الوارد للاستقبال والتسخين)</label>
+                            <input type="text" id="acc-imap-host" value="imap.hostinger.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-plug" style="color: var(--accent-cyan);"></i> منفذ IMAP (Port الوارد)</label>
+                            <input type="number" id="acc-imap-port" value="993" required>
+                        </div>
+                        <div class="form-group">
+                            <label>نوع التشفير (SSL/TLS)</label>
                             <select id="acc-ssl">
-                                <option value="true">SSL / TLS (المنفذ 465 - موصى به)</option>
+                                <option value="true">SSL / TLS (المنفذ 465 & 993 - موصى به)</option>
                                 <option value="false">STARTTLS (المنفذ 587)</option>
                             </select>
                         </div>
@@ -199,6 +274,121 @@
                 </div>
             </section>
 
+            <!-- TAB: اختبار وفحص الإيميلات والقرار الذكي (Email Audit & Decision Center) -->
+            <section class="tab-content" id="tab-email-audit">
+                <div class="panel style-glass" style="border: 2px solid var(--accent-cyan); border-radius: 18px; background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); padding: 25px;">
+                    
+                    <div class="panel-header" style="border-bottom: 1px solid rgba(14,165,233,0.2); padding-bottom: 15px; margin-bottom: 20px;">
+                        <div>
+                            <h2 style="color: var(--accent-cyan); font-size: 1.4rem; margin-bottom: 5px;">
+                                <i class="fa-solid fa-vial-circle-check" style="color: var(--accent-cyan);"></i> مركز اختبار وفحص الإيميلات والقرار الذكي (Email Audit & Decision Center)
+                            </h2>
+                            <p class="text-muted" style="margin: 0; font-size: 0.95rem;">ارفع ملف الإكسيل هنا ليولد لك السيرفر تقريراً تشخيصياً شاملاً، وتتحكم بالقرار كاملاً: إرسال، إلغاء، أو ترك القرار التلقائي للذكاء الاصطناعي!</p>
+                        </div>
+                    </div>
+
+                    <!-- خيارات الإدخال: رفع ملف إكسيل OR لصق إيميلات مباشرة -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 15px;">
+                        <!-- الخيار 1: رفع ملف إكسيل -->
+                        <div class="dropzone" id="audit-dropzone" style="border: 2px dashed var(--accent-cyan); background: rgba(14,165,233,0.05); padding: 20px; text-align: center; border-radius: 14px; cursor: pointer;">
+                            <i class="fa-solid fa-file-circle-check drop-icon" style="font-size: 2.2rem; color: var(--accent-cyan); margin-bottom: 8px;"></i>
+                            <h3 style="color: #fff; font-size: 1rem; margin-bottom: 4px;">1. رفع ملف Excel أو CSV للفحص</h3>
+                            <p class="text-muted" style="font-size: 0.8rem; margin: 0;">اسحب وأسقط الملف هنا</p>
+                            <input type="file" id="audit-file-input" accept=".xlsx,.xls,.csv" hidden>
+                        </div>
+
+                        <!-- الخيار 2: لصق إيميلات مباشرة (Copy & Paste) -->
+                        <div style="background: rgba(14,165,233,0.05); border: 2px dashed #a855f7; padding: 15px; border-radius: 14px;">
+                            <h3 style="color: #a855f7; font-size: 1rem; margin-bottom: 6px;">
+                                <i class="fa-solid fa-paste"></i> 2. أو انسخ والصق الإيميلات مباشرة (Copy & Paste)
+                            </h3>
+                            <textarea id="audit-paste-input" rows="3" placeholder="الصق الإيميلات هنا مباشرة (إيميل في كل سطر أو مقسومة بفواصل)..." style="width: 100%; font-size: 0.85rem; border-radius: 6px; padding: 6px; background: rgba(15,23,42,0.8); color: #fff; border: 1px solid rgba(255,255,255,0.1); margin-bottom: 8px; resize: vertical;"></textarea>
+                            <button class="btn btn-sm btn-primary full-width" id="btn-audit-paste-submit" style="border-radius: 6px; background: linear-gradient(135deg, #a855f7, #6366f1); border: none;">
+                                <i class="fa-solid fa-vial-circle-check"></i> فحص واختبار الإيميلات الملصوقة فوراً
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- حاوية التقرير التشخيصي التفصيلي وقرار الإرسال -->
+                    <div id="audit-report-panel" class="hidden mt-25 p-20 style-glass" style="border: 1px solid var(--accent-gold); border-radius: 16px; background: rgba(15,23,42,0.9);">
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed rgba(255,255,255,0.15); padding-bottom: 15px; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <h3 style="color: var(--accent-gold); margin: 0; font-size: 1.2rem;" id="audit-file-title">
+                                    <i class="fa-solid fa-file-signature"></i> التقرير التشخيصي الشامل للملف
+                                </h3>
+                                <small style="color: #94a3b8;" id="audit-file-subtitle">تم تشخيص ودراسة سجلات الـ MX والدومينات بنجاح</small>
+                            </div>
+                            <span class="badge green" id="audit-health-score" style="font-size: 0.9rem; padding: 6px 12px; border-radius: 20px;">
+                                👑 جاهزية ممتازة 100%
+                            </span>
+                        </div>
+
+                        <!-- كروت الإحصائيات الفورية للفحص -->
+                        <div class="stats-grid mb-20" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                            <div class="stat-card blue" style="background: rgba(30,41,59,0.8); border: 1px solid #3b82f6;">
+                                <h3 id="audit-stat-valid" style="color: #3b82f6; font-size: 1.6rem; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #cbd5e1;">إيميلات بدومينات نشطة (MX Valid) 🟢</p>
+                            </div>
+                            <div class="stat-card red" style="background: rgba(30,41,59,0.8); border: 1px solid #ef4444;">
+                                <h3 id="audit-stat-invalid" style="color: #ef4444; font-size: 1.6rem; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #cbd5e1;">دومينات غير موجودة / صيغة تالفة 🔴</p>
+                            </div>
+                            <div class="stat-card orange" style="background: rgba(30,41,59,0.8); border: 1px solid var(--accent-gold);">
+                                <h3 id="audit-stat-duplicates" style="color: var(--accent-gold); font-size: 1.6rem; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #cbd5e1;">مكرر تم استبعاده ⚠️</p>
+                            </div>
+                            <div class="stat-card purple" style="background: rgba(30,41,59,0.8); border: 1px solid #a855f7;">
+                                <h3 id="audit-stat-sentbefore" style="color: #a855f7; font-size: 1.6rem; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #cbd5e1;">مراسلون سابقاً (مستبعدون)</p>
+                            </div>
+                        </div>
+
+                        <!-- شريط اتخاذ القرار والتحكم الكامل من المالك أو الذكاء الاصطناعي -->
+                        <div style="background: rgba(30,41,59,0.95); border: 2px solid var(--accent-gold); border-radius: 14px; padding: 20px; margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-gold); margin: 0 0 10px 0; font-size: 1.05rem;">
+                                <i class="fa-solid fa-user-gear"></i> لوحة القرار والتحكم الكامل المباشر (Master Control Options):
+                            </h4>
+                            <p style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 15px;">اختر إجراء الإرسال المناسب أو دَع الذكاء الاصطناعي يتخذ القرار المعتمد مكانك تلقائياً:</p>
+                            
+                            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                                <button class="btn btn-lg btn-primary style-glass" id="btn-audit-autopilot" style="font-size: 0.95rem; font-weight: bold; background: linear-gradient(135deg, #0284c7, #3b82f6); border: none;">
+                                    🤖 اتخذ القرار التلقائي مكانك (Autopilot AI Approve & Launch)
+                                </button>
+                                <button class="btn btn-lg btn-success" id="btn-audit-send-clean" style="font-size: 0.95rem; font-weight: bold;">
+                                    🟢 اعتماد وإرسال للإيميلات السليمة فقط (<span id="btn-clean-cnt">0</span> إيميل)
+                                </button>
+                                <button class="btn btn-lg btn-danger style-glass" id="btn-audit-cancel" style="font-size: 0.95rem;">
+                                    🛑 إلغاء وتعديل الملف
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- جدول المعاينة التفصيلي للإيميلات المفحوصة -->
+                        <h4 style="color: var(--accent-cyan); margin: 15px 0 10px 0; font-size: 1rem;">
+                            <i class="fa-solid fa-list-check"></i> تفاصيل فحص الدومين وسجلات البريد (MX Verification Details):
+                        </h4>
+                        <div class="table-responsive" style="max-height: 350px; overflow-y: auto;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>اسم الشركة</th>
+                                        <th>البريد الإلكتروني</th>
+                                        <th>فحص سيرفر البريد (MX Status)</th>
+                                        <th>قرار الاعتماد</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="audit-table-tbody">
+                                    <tr><td colspan="5" class="text-center">جاري تحميل بيانات الفحص...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
             <!-- TAB 3: رفع وتنقية Excel -->
             <section class="tab-content" id="tab-excel">
                 <div class="panel">
@@ -213,18 +403,73 @@
                     </div>
                 </div>
 
+                <div class="panel mt-20" id="excel-files-library-panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-folder-open" style="color: var(--accent-gold);"></i> مكتبة ملفات الإكسيل الدائمة (Cloud Excel Files Repository)</h2>
+                        <button class="btn btn-sm btn-outline" id="btn-refresh-excel-files"><i class="fa-solid fa-rotate"></i> تحديث المكتبة</button>
+                    </div>
+                    <p class="text-muted mb-15">جميع الملفات المرفوعة محفوظة بشكل دائم على سيرفرك السحابي، يمكنك التبديل بينها، معاينتها، تفعيلها للحملة المباشرة، أو حذفها في أي وقت دون أن تضيع عند الـ Refresh!</p>
+                    <div class="table-responsive mb-15">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>اسم الملف المرفوع</th>
+                                    <th>الإيميلات الجاهزة</th>
+                                    <th>تاريخ الرفع</th>
+                                    <th>حالة التفعيل</th>
+                                    <th>الإجراءات والتحكم</th>
+                                </tr>
+                            </thead>
+                            <tbody id="excel-files-library-tbody">
+                                <tr><td colspan="5" class="text-center">جاري تحميل مكتبة الملفات...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <div class="panel mt-20 hidden" id="excel-stats-panel">
                     <div class="panel-header">
-                        <h2><i class="fa-solid fa-chart-pie"></i> تقرير تنقية وفلترة البيانات</h2>
+                        <h2><i class="fa-solid fa-chart-pie"></i> تقرير تنقية البيانات واستعراض المستلمين المرفوعين</h2>
+                        <button class="btn btn-sm btn-outline" id="btn-reload-recipients"><i class="fa-solid fa-rotate"></i> تحديث القائمة</button>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-card green">
-                            <h3 id="ex-valid">0</h3>
-                            <p>إيميلات جاهزة للإرسال</p>
+                    <!-- شريط جاهزية الحملة الفورية وزر الإطلاق بنقرة واحدة -->
+                <div class="panel style-glass mb-20 p-20" style="border: 2px solid var(--accent-gold); border-radius: 16px; background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95));">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                        <div>
+                            <h2 style="color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 5px;">
+                                <i class="fa-solid fa-rocket" style="color: var(--accent-gold);"></i> مركز الإطلاق الفوري بنقرة واحدة (1-Click Campaign Wizard)
+                            </h2>
+                            <p class="text-muted" style="margin: 0;">يتحقق النظام أوتوماتيكياً من اكتمال الجاهزية ويطلق الحملة فوراً دون تعقيد:</p>
+                        </div>
+                        <button class="btn btn-lg btn-success" id="btn-1click-launch" style="font-size: 1.1rem; padding: 12px 24px; font-weight: bold; box-shadow: 0 0 20px rgba(16,185,129,0.4);">
+                            <i class="fa-solid fa-paper-plane"></i> 🚀 إطلاق الحملة الفورية بنقرة واحدة
+                        </button>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <div class="readiness-item" id="chk-accounts" style="color: #10b981; font-size: 0.95rem;">
+                            <i class="fa-solid fa-circle-check"></i> <span>حسابات الـ SMTP متصلة</span>
+                        </div>
+                        <div class="readiness-item" id="chk-excel" style="color: #10b981; font-size: 0.95rem;">
+                            <i class="fa-solid fa-circle-check"></i> <span>شيت الإكسيل جاهز ومفعل</span>
+                        </div>
+                        <div class="readiness-item" id="chk-template" style="color: #10b981; font-size: 0.95rem;">
+                            <i class="fa-solid fa-circle-check"></i> <span>المتغيرات والرسالة مجهزة</span>
+                        </div>
+                        <div class="readiness-item" id="chk-profile" style="color: #10b981; font-size: 0.95rem;">
+                            <i class="fa-solid fa-circle-check"></i> <span>بروفايل صمود PDF مرفق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid mb-20" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+                        <div class="stat-card green" style="border: 1px solid #10b981;">
+                            <h3 id="ex-valid" style="color: #10b981;">0</h3>
+                            <p>مفحوصة بدومينات نشطة 🟢 (MX)</p>
                         </div>
                         <div class="stat-card red">
                             <h3 id="ex-invalid">0</h3>
-                            <p>إيميلات خاطئة الصيغة</p>
+                            <p>دومين تالف / صيغة خاطئة 🔴</p>
                         </div>
                         <div class="stat-card orange">
                             <h3 id="ex-duplicates">0</h3>
@@ -235,11 +480,223 @@
                             <p>مراسلون سابقاً (مستبعدون)</p>
                         </div>
                     </div>
+
+                    <!-- عارض شيتات الإكسيل التفاعلي المباشر -->
+                    <div class="excel-viewer-container style-glass mt-20 p-15" style="border: 1px solid var(--accent-gold); border-radius: 12px; background: rgba(15, 23, 42, 0.9);">
+                        <div class="panel-header mb-15">
+                            <h2><i class="fa-solid fa-table-cells" style="color: var(--accent-gold);"></i> عارض شيت الإكسيل الحقيقي (Excel Live Workbook Viewer)</h2>
+                        </div>
+                        <div class="excel-tabs-bar mb-15" id="excel-sheet-tabs" style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <button class="btn btn-sm btn-primary active-excel-tab">📊 شيت البيانات الرئيسي</button>
+                        </div>
+                        <div class="table-responsive" style="max-height: 450px; overflow-y: auto;">
+                            <table class="data-table" id="excel-raw-table" style="font-size: 0.9rem;">
+                                <thead id="excel-raw-thead">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Country</th>
+                                        <th>Company_Name</th>
+                                        <th>Primary_Email</th>
+                                        <th>Secondary_Email</th>
+                                        <th>Sector</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="excel-raw-tbody">
+                                    <tr><td colspan="6" class="text-center">قم برفع ملف Excel لاستعراض بياناته بالشكل الأصلي...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <h3 class="mb-10" style="margin-top: 25px;"><i class="fa-solid fa-list-check" style="color: var(--accent-cyan);"></i> قائمة الإيميلات المنقاة والجاهزة للإرسال أوتوماتيكياً:</h3>
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>اسم الشركة</th>
+                                    <th>البريد الإلكتروني المنقى</th>
+                                    <th>اسم المسؤول</th>
+                                    <th>القطاع / المجال</th>
+                                    <th>فحص سيرفر البريد (MX Status)</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody id="excel-recipients-tbody">
+                                <tr><td colspan="7" class="text-center">قم برفع ملف Excel لعرض المستلمين هنا...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 
-            <!-- TAB 4: القوالب و Spintax -->
+            <!-- TAB 4: القوالب و Spintax وتوليد الرسائل المخصصة بالقطاع والدولة -->
             <section class="tab-content" id="tab-templates">
+                <div class="panel mb-20" style="background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); border: 1px solid var(--accent-cyan); border-radius: 16px;">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-blue);"></i> المولّد الذكي للرسائل (توليد تلقائي حسب التخصص والدولة واللغة)</h2>
+                    </div>
+                    <p class="text-muted mb-20">بمجرد اختيار التخصص والدولة واللهجة، سيقوم البرنامج **تلقائياً وبنفس اللحظة** بكتابة وتجهيز الرسالة بالكامل مدمجة بتفاصيل شركة صمود وتخصصات القطاع والدولة!</p>
+
+                    <div class="grid-form">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-briefcase"></i> اختر التخصص / القطاع المستهدف:</label>
+                            <select id="smart-select-sector" style="font-weight: bold;">
+                                <option value="المقاولات والتشييد">🏗️ المقاولات والتشييد والبناء</option>
+                                <option value="التشغيل والصيانة">🛠️ التشغيل والصيانة وإدارة المرافق</option>
+                                <option value="الرعاية الصحية">🩺 الرعاية الصحية والمستشفيات والتمريض</option>
+                                <option value="تقنية المعلومات">💻 تقنية المعلومات والبرمجيات</option>
+                                <option value="الفنادق والضيافة">🏨 الفنادق والضيافة والمطاعم</option>
+                                <option value="الأمن والحراسة">🛡️ الأمن والحراسة والسلامة</option>
+                                <option value="التعليم والتدريب">🎓 التعليم والتدريب والكوادر الأكاديمية</option>
+                                <option value="اللوجستيات والنقل">🚚 اللوجستيات والنقل والنقل الثقيل</option>
+                                <option value="عام">🌟 عام - كافة القطاعات والتخصصات</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-earth-americas"></i> اختر الدولة المستهدفة:</label>
+                            <select id="smart-select-country" style="font-weight: bold;">
+                                <!-- يتم تحميل الـ 22 دولة عربية أوتوماتيكياً -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-language"></i> اختر اللهجة / اللغة:</label>
+                            <select id="smart-select-language" style="font-weight: bold;">
+                                <option value="العربية (اللهجة الخليجية)">🇸🇦 العربية (اللهجة الخليجية / السعودية)</option>
+                                <option value="العربية (فصحى)" selected>📜 العربية (فصحى رسمية)</option>
+                                <option value="العربية (اللهجة المصرية)">🇪🇬 العربية (اللهجة المصرية المباشرة)</option>
+                                <option value="English">🇬🇧 English Professional (B2B)</option>
+                                <option value="French">🇫🇷 French Professional (B2B)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 🛡️ لوحة التحكم بالمتغيرات الـ 8 لمكافحة الحظر والسبام -->
+                <div class="panel mb-20" style="background: rgba(15, 23, 42, 0.95); border: 1px solid var(--accent-gold); border-radius: 16px;">
+                    <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(230, 180, 85, 0.2); padding-bottom: 12px; margin-bottom: 15px;">
+                        <h2 style="color: var(--accent-gold);"><i class="fa-solid fa-shield-halved" style="color: var(--accent-gold);"></i> لوحة التحكم بمفاتيح الـ 8 متغيرات (لمنع الحظر والسبام 100%)</h2>
+                        <span class="badge badge-success" style="background: rgba(230,180,85,0.2); color: var(--accent-gold); border: 1px solid var(--accent-gold); font-size: 13px; padding: 6px 12px;">🔥 تُنتج 675,000 صياغة فريدة</span>
+                    </div>
+                    <p class="text-muted mb-15">يمكنك التحكم في تفعيل أو تعطيل أي متغير (ON/OFF) لإنشاء مئات آلاف الصياغات المختلفة ومنع فلترة رسائلك كـ Spam:</p>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 15px;">
+                        
+                        <!-- Variable 1 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">1️⃣ تحية الفتح والمطلع</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(6 تحيات وتغطيات مختلفة)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v1" value="v1" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 2 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">2️⃣ مخاطبة الشركة المستهدفة</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(5 صيغ للمناداة والدولة)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v2" value="v2" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 3 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">3️⃣ الجملة الاستفتاحية الممهدة</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(5 صياغات تمهيدية للتعاون)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v3" value="v3" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 4 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">4️⃣ إشهار صمود وتراخيص 1366</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(5 صيغ إشهارية وتراخيص صمود)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v4" value="v4" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 5 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">5️⃣ صياغة التخصصات والكوادر</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(6 صيغ ديناميكية لتغطية المهن)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v5" value="v5" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 6 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">6️⃣ المزايا والضمان والدعم اللوجستي</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(5 صياغات لشركة غاية 1539)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v6" value="v6" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 7 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">7️⃣ الدعوة للتواصل عبر الواتساب</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(5 صيغ دعوة لمحادثة م. مصطفى)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v7" value="v7" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <!-- Variable 8 -->
+                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;">
+                            <div>
+                                <strong style="color: var(--accent-gold); display: block; font-size: 14px;">8️⃣ صيغة التوقيع والختام الرسمي</strong>
+                                <small style="color: #94a3b8; font-size: 11px;">(6 صيغ ختامية وتمنيات رسمية)</small>
+                            </div>
+                            <label class="switch-toggle">
+                                <input type="checkbox" class="antispam-var-switch" id="var-switch-v8" value="v8" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel mb-20">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-book-bookmark"></i> القوالب الدعائية المجهزة مسبقاً</h2>
+                    </div>
+                    <div class="grid-form">
+                        <div class="form-group full-width">
+                            <label>اختر من مكتبة القوالب الجاهزة</label>
+                            <select id="select-builtin-template">
+                                <option value="">-- اختر قالب مسبق للتحميل الفوري --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="panel">
                     <div class="panel-header">
                         <h2><i class="fa-solid fa-pen-to-square"></i> محرر قوالب الرسائل و Spintax</h2>
@@ -251,7 +708,17 @@
                         </div>
                         <div class="form-group">
                             <label>القطاع المستهدف</label>
-                            <input type="text" id="tpl-industry" value="عام" required>
+                            <input type="text" id="tpl-sector" value="المقاولات والتشييد" required>
+                        </div>
+                        <div class="form-group">
+                            <label>اللغة / اللهجة</label>
+                            <select id="tpl-language">
+                                <option value="العربية (فصحى)">العربية (فصحى)</option>
+                                <option value="العربية (اللهجة الخليجية)">العربية (اللهجة الخليجية / السعودية)</option>
+                                <option value="العربية (اللهجة المصرية)">العربية (اللهجة المصرية)</option>
+                                <option value="English">English Professional</option>
+                                <option value="French">French Professional</option>
+                            </select>
                         </div>
 
                         <div class="variables-bar">
@@ -259,7 +726,7 @@
                             <button type="button" class="btn-tag" data-tag="{اسم_الشركة}">+ اسم الشركة</button>
                             <button type="button" class="btn-tag" data-tag="{اسم_المسؤول}">+ اسم المسؤول</button>
                             <button type="button" class="btn-tag" data-tag="{القطاع}">+ القطاع</button>
-                            <button type="button" class="btn-tag" data-tag="{تحية طيبة|السلام عليكم}">+ Spintax تحية</button>
+                            <button type="button" class="btn-tag" data-tag="{تحية طيبة|السلام عليكم|أهلاً بكم}">+ Spintax تحية</button>
                         </div>
 
                         <div class="form-group">
@@ -273,24 +740,104 @@
                         </div>
 
                         <div class="form-group">
-                            <label>إرفاق ملف بروفايل الشركة (PDF)</label>
-                            <input type="file" id="tpl-attachment" accept=".pdf">
-                        </div>
-
-                        <div class="form-group">
                             <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> حفظ القالب</button>
                         </div>
                     </form>
                 </div>
             </section>
 
-            <!-- TAB 5: الإعدادات والأمان -->
+            <!-- TAB 5: الرفع الموحد لبروفايل الشركة Profile PDF -->
+            <section class="tab-content" id="tab-profile">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2><i class="fa-solid fa-file-pdf"></i> رفع بروفايل الشركة الموحد (PDF)</h2>
+                    </div>
+                    <p class="text-muted mb-20">يرفع ملف البروفايل **مرة واحدة فقط**، وسيقوم البرنامج بتدبيسه وإرفاقه تلقائياً في كافة الحملات والمراسلات.</p>
+
+                    <div class="grid-form">
+                        <!-- بروفايل عربي -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-file-pdf"></i> ملف بروفايل الشركة باللغة العربية (PDF)</label>
+                            <input type="file" id="profile-ar-file" accept=".pdf">
+                            <button class="btn btn-secondary mt-10" id="btn-upload-profile-ar"><i class="fa-solid fa-upload"></i> حفظ البروفايل العربي</button>
+                            <span class="status-pill green mt-10 hidden" id="status-profile-ar">تم الرفع وتأمين الملف العربي</span>
+                        </div>
+
+                        <!-- بروفايل إنجليزي -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-file-pdf"></i> ملف بروفايل الشركة باللغة الإنجليزية (PDF)</label>
+                            <input type="file" id="profile-en-file" accept=".pdf">
+                            <button class="btn btn-secondary mt-10" id="btn-upload-profile-en"><i class="fa-solid fa-upload"></i> حفظ البروفايل الإنجليزي</button>
+                            <span class="status-pill green mt-10 hidden" id="status-profile-en">تم الرفع وتأمين الملف الإنجليزي</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 6: الإعدادات والأمان والتوقيت الدولي -->
             <section class="tab-content" id="tab-settings">
                 <div class="panel">
                     <div class="panel-header">
-                        <h2><i class="fa-solid fa-shield-halved"></i> إعدادات الفواصل الزمانية والحماية من الحظر</h2>
+                        <h2><i class="fa-solid fa-earth-americas"></i> تحديد دولة المستهدفين وتوقيت الدوام الرسمي</h2>
                     </div>
                     <form id="form-settings" class="grid-form">
+                        <div class="form-group full-width">
+                            <label><i class="fa-solid fa-globe"></i> اختر الدولة والمنطقة المستهدفة (لربط مواعيد العمل التلقائية):</label>
+                            <select id="set-target-country" style="font-weight: bold; font-size: 15px;">
+                                <option value="SA">🇸🇦 المملكة العربية السعودية (توقيت مكة UTC+3)</option>
+                                <option value="AE">🇦🇪 الإمارات العربية المتحدة (توقيت دبي UTC+4)</option>
+                                <option value="QA">🇶🇦 دولة قطر (توقيت الدوحة UTC+3)</option>
+                                <option value="KW">🇰🇼 دولة الكويت (توقيت الكويت UTC+3)</option>
+                                <option value="OM">🇴🇲 سلطنة عمان (توقيت مسقط UTC+4)</option>
+                                <option value="EG">🇪🇬 جمهورية مصر العربية (توقيت القاهرة UTC+3)</option>
+                            </select>
+                        </div>
+
+                        <!-- 🕒 تخصيص ساعات الدوام اليومي والتحكم بدقائق الإرسال -->
+                        <div class="panel-header full-width mt-10 mb-10" style="border-bottom: 1px solid rgba(56, 189, 248, 0.3); padding-bottom: 8px;">
+                            <h3 style="color: var(--accent-cyan); font-size: 1.1rem;">
+                                <i class="fa-solid fa-clock"></i> تخصيص نطاق ساعات الإرسال والالتزام بالدوام الرسمي:
+                            </h3>
+                        </div>
+
+                        <!-- الالتزام بساعات الدوام -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-calendar-day" style="color: var(--accent-gold);"></i> الالتزام بساعات الدوام الرسمي فقط:</label>
+                            <select id="set-working-hours-only" style="font-weight: bold;">
+                                <option value="true" selected>نعم، الالتزام بساعات الدوام الرسمي فقط ⏰</option>
+                                <option value="false">لا، الإرسال على مدار 24 ساعة دون توقف ⚡</option>
+                            </select>
+                        </div>
+
+                        <!-- ساعة بداية الإرسال -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-business-time" style="color: #10b981;"></i> ساعة بداية الإرسال (Work Start Hour):</label>
+                            <select id="set-work-start-hour" style="font-weight: bold;">
+                                <option value="6">6:00 صباحاً (06:00)</option>
+                                <option value="7">7:00 صباحاً (07:00)</option>
+                                <option value="8" selected>8:00 صباحاً (08:00) - افتراضي</option>
+                                <option value="9">9:00 صباحاً (09:00)</option>
+                                <option value="10">10:00 صباحاً (10:00)</option>
+                                <option value="11">11:00 صباحاً (11:00)</option>
+                                <option value="12">12:00 ظهراً (12:00)</option>
+                            </select>
+                        </div>
+
+                        <!-- ساعة نهاية الإرسال -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-ban" style="color: #ef4444;"></i> ساعة نهاية الإرسال والتوقف (Work End Hour):</label>
+                            <select id="set-work-end-hour" style="font-weight: bold;">
+                                <option value="15">3:00 عصراً (15:00)</option>
+                                <option value="16">4:00 عصراً (16:00)</option>
+                                <option value="17" selected>5:00 مساءً (17:00) - افتراضي</option>
+                                <option value="18">6:00 مساءً (18:00)</option>
+                                <option value="19">7:00 مساءً (19:00)</option>
+                                <option value="20">8:00 مساءً (20:00)</option>
+                                <option value="21">9:00 مساءً (21:00)</option>
+                                <option value="22">10:00 مساءً (22:00)</option>
+                            </select>
+                        </div>
+
                         <div class="form-group">
                             <label>الحد الأدنى للتأخير العشوائي (ثواني)</label>
                             <input type="number" id="set-delay-min" value="45" min="10">
@@ -303,29 +850,766 @@
                             <label>الحد الأقصى للرسائل في الساعة (لكل حساب)</label>
                             <input type="number" id="set-hourly-cap" value="20" min="1">
                         </div>
+                        <!-- الخوارزميات والأنظمة المتقدمة 2026 -->
+                        <div class="panel-header full-width mt-20 mb-10" style="border-bottom: 1px solid rgba(230, 180, 85, 0.3); padding-bottom: 8px;">
+                            <h3 style="color: var(--accent-gold); font-size: 1.1rem;"><i class="fa-solid fa-wand-magic-sparkles"></i> التحكم في الخوارزميات المتقدمة (أحدث تقنيات التسويق 2026):</h3>
+                        </div>
+
+                        <!-- 1. الساعة الذهبية -->
                         <div class="form-group">
-                            <label>الإرسال فقط خلال ساعات العمل الرسمية</label>
-                            <select id="set-working-hours">
-                                <option value="true">نعم (موصى به لحماية البريد)</option>
-                                <option value="false">لا (إرسال على مدار 24 ساعة)</option>
+                            <label><i class="fa-solid fa-clock" style="color: var(--accent-gold);"></i> خوارزمية الساعة الذهبية للإرسال (Golden Hour Engine):</label>
+                            <select id="set-golden-hour" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل ⚡ (الإرسال دقيقة فتح بريد رئيس الشركة)</option>
+                                <option value="false">معطل (إرسال عادي)</option>
                             </select>
                         </div>
+
+                        <!-- 2. رصد العملاء المهتمين -->
                         <div class="form-group">
-                            <label>بداية ساعات العمل (بتوقيت السيرفر)</label>
-                            <input type="number" id="set-work-start" value="8" min="0" max="23">
+                            <label><i class="fa-solid fa-radar" style="color: var(--accent-cyan);"></i> رصد الردود واقتناص المهتمين (Hot Lead Radar):</label>
+                            <select id="set-hot-lead-alert" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 🟢 (تنبيه وتصنيف الردود المهتمة)</option>
+                                <option value="false">معطل</option>
+                            </select>
                         </div>
+
+                        <!-- 3. رقم واتساب التنبيهات -->
                         <div class="form-group">
-                            <label>نهاية ساعات العمل (بتوقيت السيرفر)</label>
-                            <input type="number" id="set-work-end" value="17" min="0" max="23">
+                            <label><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> رقم الواتساب لاستقبال تنبيهات الردود المباشرة:</label>
+                            <input type="text" id="set-alert-whatsapp" value="201068158722" placeholder="201068158722" style="font-weight: bold;">
                         </div>
-                        <div class="form-group full-width">
-                            <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> حفظ إعدادات الأمان</button>
+
+                        <!-- 4. درع الوقاية ضد مصائد السبام -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-shield-virus" style="color: #ef4444;"></i> درع الوقاية ضد مصائد السبام (Anti-Trap Shield):</label>
+                            <select id="set-anti-trap" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 🛡️ (تجنب الإيميلات الوهمية والمصائد)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 5. التأثير المزدوج -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i> التأثير المزدوج إيميل + واتساب (Double Impact):</label>
+                            <select id="set-double-impact" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 📲 (توليد أزرار الواتساب المباشرة)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 7. سلاسل المتابعة التلقائية -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-arrows-spin" style="color: var(--accent-cyan);"></i> سلاسل المتابعة الذكية (Multi-Step Followups):</label>
+                            <select id="set-followup-sequence" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 🎯 (إرسال تذكيرات بعد 3 و7 أيام)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 8. اختبارات A/B -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-flask" style="color: #a855f7;"></i> اختبارات A/B للقوالب والعناوين (A/B Testing Engine):</label>
+                            <select id="set-ab-testing" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 🧪 (قياس أفضل صياغة أوتوماتيكياً)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 9. لوحة إدارة الصفقات CRM -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-square-poll-vertical" style="color: var(--accent-gold);"></i> لوحة تتبع الصفقات والعملاء (CRM Deal Pipeline):</label>
+                            <select id="set-crm-pipeline" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 📊 (متابعة تحول الشركات لعقود)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 10. محرك تسخين البريد -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-fire" style="color: #f97316;"></i> محرك تسخين الحسابات والسمعة (Email Warmup Engine):</label>
+                            <select id="set-warmup-engine" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 🔥 (رفع سمعة البريد والدومين 100%)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 11. الإنقاذ التلقائي من مجلد الـ Spam -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-life-ring" style="color: #10b981;"></i> الإنقاذ التلقائي من مجلد السبام (Auto-Unspam & Primary Saver):</label>
+                            <select id="set-warmup-auto-unspam" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 🟢 (نقل الرسائل تلقائياً لـ Inbox وتدريب الذكاء الاصطناعي)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 12. الرد التفاعلي داخل المحادثة -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-comments" style="color: var(--accent-cyan);"></i> الرد التفاعلي التلقائي داخل المحادثة (Auto-Reply Threading Re:):</label>
+                            <select id="set-warmup-reply-threading" style="font-weight: bold;">
+                                <option value="true" selected>مُفعل 💬 (تبادل الردود والرسائل التفاعلية الشبيهة بالبشر)</option>
+                                <option value="false">معطل</option>
+                            </select>
+                        </div>
+
+                        <!-- 13. التدرج اليومي -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-chart-line" style="color: var(--accent-gold);"></i> معدل التدرج التصاعدي اليومي للتسخين (Ramp-up Step):</label>
+                            <select id="set-warmup-rampup-step" style="font-weight: bold;">
+                                <option value="2" selected>+2 إيميلات يومياً (تدرج آمن ومثالي)</option>
+                                <option value="4">+4 إيميلات يومياً (تسخين سريع)</option>
+                                <option value="1">+1 إيميل يومياً (تسخين فائق الحذر)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width mt-10">
+                            <button type="submit" class="btn btn-primary" style="font-size: 1.05rem; padding: 12px;"><i class="fa-solid fa-check"></i> حفظ إعدادات المفاتيح والخوارزميات الشاملة</button>
                         </div>
                     </form>
                 </div>
             </section>
 
-            <!-- TAB 6: السيرفر والأمان -->
+            <!-- TAB 9: لوحة إدارة الصفقات والعملاء CRM -->
+            <section class="tab-content" id="tab-crm">
+                <div class="panel style-glass" style="border: 1px solid var(--accent-gold); border-radius: 18px; background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.95)); padding: 25px;">
+                    
+                    <div class="panel-header" style="border-bottom: 1px solid rgba(230,180,85,0.2); padding-bottom: 15px; margin-bottom: 20px;">
+                        <div>
+                            <h2 style="color: var(--accent-gold); font-size: 1.4rem; margin-bottom: 4px;">
+                                <i class="fa-solid fa-square-poll-vertical" style="color: var(--accent-gold);"></i> لوحة إدارة الصفقات والعملاء الفاخرة (Enterprise CRM Deal Board)
+                            </h2>
+                            <p class="text-muted" style="margin: 0; font-size: 0.95rem;">تتبع مسار وإغلاق العقود مع الشركات المستهدفة بتقنية الكروت الذكية 2026</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline style-glass" id="btn-refresh-crm" style="color: var(--accent-gold); border-color: var(--accent-gold);"><i class="fa-solid fa-rotate"></i> تحديث اللوحة</button>
+                    </div>
+
+                    <!-- شريط الإحصائيات العلوية الفاخرة للصفقات -->
+                    <div class="stats-grid mb-20" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                        <div class="stat-card blue" style="background: rgba(15,23,42,0.7); border: 1px solid rgba(59,130,246,0.3); border-radius: 14px; padding: 15px;">
+                            <div class="stat-icon"><i class="fa-solid fa-bullseye" style="color: #3b82f6;"></i></div>
+                            <div class="stat-info">
+                                <h3 id="crm-stat-total" style="color: #3b82f6; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #94a3b8;">إجمالي الصفقات بالأنبوب</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card green" style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.3); border-radius: 14px; padding: 15px;">
+                            <div class="stat-icon"><i class="fa-solid fa-fire" style="color: #10b981;"></i></div>
+                            <div class="stat-info">
+                                <h3 id="crm-stat-hot" style="color: #10b981; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #94a3b8;">عملاء مهتمين جداً (Hot)</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card orange" style="background: rgba(15,23,42,0.7); border: 1px solid rgba(230,180,85,0.3); border-radius: 14px; padding: 15px;">
+                            <div class="stat-icon"><i class="fa-solid fa-file-signature" style="color: var(--accent-gold);"></i></div>
+                            <div class="stat-info">
+                                <h3 id="crm-stat-proposals" style="color: var(--accent-gold); font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #94a3b8;">عروض رسمية مرسلة</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card purple" style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.3); border-radius: 14px; padding: 15px;">
+                            <div class="stat-icon"><i class="fa-solid fa-trophy" style="color: #a855f7;"></i></div>
+                            <div class="stat-info">
+                                <h3 id="crm-stat-signed" style="color: #a855f7; font-weight: bold;">0</h3>
+                                <p style="font-size: 0.85rem; color: #94a3b8;">عقود موُقعة ومكتملة 🎉</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- شريط الفلترة والبحث الفوري لحملات الآلاف High-Scale Filters -->
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; background: rgba(15,23,42,0.6); padding: 12px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                        <div style="flex: 2; min-width: 240px; position: relative;">
+                            <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 12px; top: 12px; color: var(--accent-gold);"></i>
+                            <input type="text" id="crm-search-input" placeholder="🔍 فلترة فورية باسم الشركة أو البريد (من بين آلاف الصفقات)..." style="padding-left: 36px; background: rgba(30,41,59,0.9); border: 1px solid var(--accent-gold); font-size: 0.95rem;">
+                        </div>
+                        <div style="flex: 1; min-width: 180px;">
+                            <select id="crm-filter-stage" style="background: rgba(30,41,59,0.9); font-weight: bold;">
+                                <option value="ALL">🌐 جميع المراحل (كل الصفقات)</option>
+                                <option value="NEW">📩 مستهدف جديد</option>
+                                <option value="CONTACTED">📤 تم المراسلة</option>
+                                <option value="HOT_LEAD">🟢 عميل مهتم جداً (Hot)</option>
+                                <option value="PROPOSAL_SENT">📄 تم إرسال العرض</option>
+                                <option value="CONTRACT_SIGNED">🎉 تم توقيع العقد</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- الأعمدة التفاعلية الخمسة للصفقات -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; overflow-x: auto; align-items: start;">
+                        
+                        <!-- Column 1: NEW -->
+                        <div style="background: rgba(15,23,42,0.75); border: 1px solid rgba(148,163,184,0.2); border-top: 4px solid #94a3b8; border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                                <h3 style="color: #94a3b8; font-size: 0.95rem; font-weight: bold; margin: 0;">
+                                    <i class="fa-solid fa-envelope-open-text" style="margin-left: 6px;"></i> مستهدف جديد
+                                </h3>
+                                <span class="badge" id="badge-cnt-new" style="background: rgba(148,163,184,0.2); color: #cbd5e1; border-radius: 12px; padding: 2px 8px; font-size: 0.8rem;">0</span>
+                            </div>
+                            <div id="crm-col-new" style="display: flex; flex-direction: column; gap: 12px; min-height: 120px;"></div>
+                        </div>
+
+                        <!-- Column 2: CONTACTED -->
+                        <div style="background: rgba(15,23,42,0.75); border: 1px solid rgba(59,130,246,0.3); border-top: 4px solid #3b82f6; border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                                <h3 style="color: #3b82f6; font-size: 0.95rem; font-weight: bold; margin: 0;">
+                                    <i class="fa-solid fa-paper-plane" style="margin-left: 6px;"></i> تم المراسلة
+                                </h3>
+                                <span class="badge" id="badge-cnt-contacted" style="background: rgba(59,130,246,0.2); color: #60a5fa; border-radius: 12px; padding: 2px 8px; font-size: 0.8rem;">0</span>
+                            </div>
+                            <div id="crm-col-contacted" style="display: flex; flex-direction: column; gap: 12px; min-height: 120px;"></div>
+                        </div>
+
+                        <!-- Column 3: HOT_LEAD -->
+                        <div style="background: rgba(15,23,42,0.75); border: 1px solid rgba(16,185,129,0.3); border-top: 4px solid #10b981; border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(16,185,129,0.15);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                                <h3 style="color: #10b981; font-size: 0.95rem; font-weight: bold; margin: 0;">
+                                    <i class="fa-solid fa-fire" style="margin-left: 6px;"></i> عميل مهتم جداً (Hot)
+                                </h3>
+                                <span class="badge" id="badge-cnt-hotlead" style="background: rgba(16,185,129,0.2); color: #34d399; border-radius: 12px; padding: 2px 8px; font-size: 0.8rem;">0</span>
+                            </div>
+                            <div id="crm-col-hotlead" style="display: flex; flex-direction: column; gap: 12px; min-height: 120px;"></div>
+                        </div>
+
+                        <!-- Column 4: PROPOSAL_SENT -->
+                        <div style="background: rgba(15,23,42,0.75); border: 1px solid rgba(230,180,85,0.3); border-top: 4px solid var(--accent-gold); border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(230,180,85,0.15);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                                <h3 style="color: var(--accent-gold); font-size: 0.95rem; font-weight: bold; margin: 0;">
+                                    <i class="fa-solid fa-file-contract" style="margin-left: 6px;"></i> تم إرسال العرض
+                                </h3>
+                                <span class="badge" id="badge-cnt-proposal" style="background: rgba(230,180,85,0.2); color: var(--accent-gold); border-radius: 12px; padding: 2px 8px; font-size: 0.8rem;">0</span>
+                            </div>
+                            <div id="crm-col-proposal" style="display: flex; flex-direction: column; gap: 12px; min-height: 120px;"></div>
+                        </div>
+
+                        <!-- Column 5: CONTRACT_SIGNED -->
+                        <div style="background: rgba(15,23,42,0.75); border: 1px solid rgba(168,85,247,0.3); border-top: 4px solid #a855f7; border-radius: 14px; padding: 16px; box-shadow: 0 8px 24px rgba(168,85,247,0.15);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 10px; margin-bottom: 14px;">
+                                <h3 style="color: #a855f7; font-size: 0.95rem; font-weight: bold; margin: 0;">
+                                    <i class="fa-solid fa-trophy" style="margin-left: 6px;"></i> تم توقيع العقد 🎉
+                                </h3>
+                                <span class="badge" id="badge-cnt-signed" style="background: rgba(168,85,247,0.2); color: #c084fc; border-radius: 12px; padding: 2px 8px; font-size: 0.8rem;">0</span>
+                            </div>
+                            <div id="crm-col-signed" style="display: flex; flex-direction: column; gap: 12px; min-height: 120px;"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 10: تسخين البريد وحماية السمعة Warmup Engine -->
+            <section class="tab-content" id="tab-warmup">
+                <div class="panel style-glass" style="border: 2px solid #f97316; border-radius: 18px; background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.95)); padding: 25px;">
+                    <div class="panel-header" style="border-bottom: 1px solid rgba(249,115,22,0.2); padding-bottom: 15px; margin-bottom: 20px;">
+                        <div>
+                            <h2 style="color: #f97316; font-size: 1.4rem; margin-bottom: 4px;">
+                                <i class="fa-solid fa-fire" style="color: #f97316;"></i> محرك تسخين الحسابات والتحكم في القوالب والمتغيرات (Warmup & Reputation Master Control)
+                            </h2>
+                            <p class="text-muted" style="margin: 0; font-size: 0.95rem;">تحكم كامل ومباشر في درجة السمعة، قوالب التسخين، وتدوير الرسائل المتغيرة لضمان وصول 100% للـ Inbox وتجنب الـ Spam للأبد!</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline style-glass" id="btn-refresh-warmup" style="color: #f97316; border-color: #f97316;"><i class="fa-solid fa-rotate"></i> تحديث السمعة</button>
+                    </div>
+
+                    <!-- 🎛️ لوحة التحكم والإدارة الفورية لعمليات التسخين (Warmup Live Controller & Timers) -->
+                    <div style="background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); border: 2px solid var(--accent-gold); border-radius: 16px; padding: 22px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(230,180,85,0.25); padding-bottom: 14px; margin-bottom: 18px; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <h3 style="color: var(--accent-gold); margin: 0; font-size: 1.25rem;">
+                                    <i class="fa-solid fa-sliders" style="color: var(--accent-gold);"></i> لوحة التحكم في مواعيد ودورات التسخين والإيقاف المباشر
+                                </h3>
+                                <p class="text-muted" style="margin: 3px 0 0 0; font-size: 0.88rem;">حدد الفترات الزمنية، عدد المواضيع لكل دورة، زمن التأخير في الرد التفاعلي، وأزرار التشغيل والإيقاف الفوري للحملة.</p>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <span style="font-size: 0.88rem; color: #94a3b8;">حالة المحرك الحالية:</span>
+                                <span id="warmup-state-badge" class="badge" style="background: rgba(16,185,129,0.2); color: #34d399; border: 1px solid #10b981; font-size: 0.95rem; padding: 6px 14px;">
+                                    🟢 قيد التشغيل والعمل 24/7 (RUNNING)
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- شبكة مدخلات الإعدادات الفنية -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-bottom: 20px;">
+                            <!-- 1. فترة التكرار بين الدورات -->
+                            <div class="form-group" style="margin: 0;">
+                                <label style="color: var(--accent-cyan); font-weight: bold; font-size: 0.9rem;">
+                                    <i class="fa-solid fa-stopwatch"></i> التكرار بين دورات التسخين:
+                                </label>
+                                <select id="ctrl-warmup-interval" style="font-weight: bold; background: rgba(15,23,42,0.9); border: 1px solid var(--accent-cyan); color: #fff; border-radius: 8px; padding: 10px;">
+                                    <option value="5">كل 5 دقائق (تسخين سريع ⚡)</option>
+                                    <option value="10">كل 10 دقائق</option>
+                                    <option value="15" selected>كل 15 دقيقة (الموصى به 🟢)</option>
+                                    <option value="30">كل 30 دقيقة</option>
+                                    <option value="60">كل ساعة (60 دقيقة)</option>
+                                </select>
+                            </div>
+
+                            <!-- 2. عدد المواضيع في الدورة الواحدة -->
+                            <div class="form-group" style="margin: 0;">
+                                <label style="color: #38bdf8; font-weight: bold; font-size: 0.9rem;">
+                                    <i class="fa-solid fa-list-ol"></i> عدد المواضيع/الإيميلات في الدورة:
+                                </label>
+                                <select id="ctrl-warmup-topics" style="font-weight: bold; background: rgba(15,23,42,0.9); border: 1px solid #38bdf8; color: #fff; border-radius: 8px; padding: 10px;">
+                                    <option value="1" selected>موضوع واحد (1 Email / Cycle - آمن)</option>
+                                    <option value="2">موضوعين (2 Emails)</option>
+                                    <option value="3">3 مواضيع (3 Emails)</option>
+                                    <option value="5">5 مواضيع (خطر - للحسابات المسخنة سابقاً)</option>
+                                </select>
+                            </div>
+
+                            <!-- 3. تأخير رد الإيميل الثاني -->
+                            <div class="form-group" style="margin: 0;">
+                                <label style="color: #a855f7; font-weight: bold; font-size: 0.9rem;">
+                                    <i class="fa-solid fa-reply-all"></i> زمن تأخير رد البريد الثاني (Reply Delay):
+                                </label>
+                                <select id="ctrl-warmup-reply-delay" style="font-weight: bold; background: rgba(15,23,42,0.9); border: 1px solid #a855f7; color: #fff; border-radius: 8px; padding: 10px;">
+                                    <option value="0">فوري دون تأخير (0 Sec)</option>
+                                    <option value="30">تأخير 30 ثانية</option>
+                                    <option value="60" selected>تأخير دقيقة واحدة (60 Sec - طبيعي)</option>
+                                    <option value="180">تأخير 3 دقائق (180 Sec)</option>
+                                    <option value="300">تأخير 5 دقائق (300 Sec)</option>
+                                </select>
+                            </div>
+
+                            <!-- 4. تمييز الإيميل كـ مهم وسحبه للوارد -->
+                            <div class="form-group" style="margin: 0;">
+                                <label style="color: #f59e0b; font-weight: bold; font-size: 0.9rem;">
+                                    <i class="fa-solid fa-star"></i> تمييز الإيميل كمهم وسحبه للوارد:
+                                </label>
+                                <select id="ctrl-warmup-mark-important" style="font-weight: bold; background: rgba(15,23,42,0.9); border: 1px solid #f59e0b; color: #fff; border-radius: 8px; padding: 10px;">
+                                    <option value="1" selected>نعم، تمييز بنجمة ونقله للـ INBOX (موصى به ⭐)</option>
+                                    <option value="0">لا، القراءة بدون تمييز بنجمة</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- أزرار التحكم الحية الثلاثية: تشغيل، إيقاف مؤقت، إيقاف نهائي -->
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; align-items: center; background: rgba(15,23,42,0.6); padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08);">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button class="btn btn-primary" id="btn-save-warmup-config" style="background: linear-gradient(135deg, #0284c7, #0369a1); font-weight: bold;">
+                                    <i class="fa-solid fa-floppy-disk"></i> حفظ الإعدادات الفنية
+                                </button>
+                                <button class="btn btn-outline" id="btn-trigger-warmup-now" style="color: var(--accent-gold); border-color: var(--accent-gold);">
+                                    <i class="fa-solid fa-bolt"></i> إطلاق نبضة تسخين فورية الآن ⚡
+                                </button>
+                            </div>
+
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button class="btn btn-success" id="btn-warmup-state-start" style="font-weight: bold;">
+                                    <i class="fa-solid fa-play"></i> 🚀 تشغيل / استئناف التسخين
+                                </button>
+                                <button class="btn btn-warning" id="btn-warmup-state-pause" style="background: #f59e0b; color: #000; font-weight: bold;">
+                                    <i class="fa-solid fa-pause"></i> ⏸️ إيقاف مؤقت
+                                </button>
+                                <button class="btn btn-danger" id="btn-warmup-state-stop" style="font-weight: bold;">
+                                    <i class="fa-solid fa-stop"></i> 🛑 إيقاف نهائي للحملة
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 📊 شريط مؤشرات الأداء والسمعة التنفيذية لخدمة التسخين -->
+                    <div class="stats-grid mb-20" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div class="stat-card blue" style="background: rgba(15,23,42,0.8); border: 1px solid rgba(59,130,246,0.4); border-radius: 14px; padding: 16px;">
+                            <div style="font-size: 0.85rem; color: #94a3b8; font-weight: bold;">إجمالي المراسلات المرسلة</div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: #3b82f6; margin-top: 4px;" id="warmup-stat-sent">142</div>
+                            <div style="font-size: 0.75rem; color: #34d399; margin-top: 4px;">⚡ عبر Hostinger & Gmail SMTP</div>
+                        </div>
+
+                        <div class="stat-card green" style="background: rgba(15,23,42,0.8); border: 1px solid rgba(16,185,129,0.4); border-radius: 14px; padding: 16px;">
+                            <div style="font-size: 0.85rem; color: #94a3b8; font-weight: bold;">المستلم والمصادق عليه (IMAP)</div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: #10b981; margin-top: 4px;" id="warmup-stat-received">142</div>
+                            <div style="font-size: 0.75rem; color: #34d399; margin-top: 4px;">⭐ تم فتحها ونقلها للـ Inbox آلياً</div>
+                        </div>
+
+                        <div class="stat-card orange" style="background: rgba(15,23,42,0.8); border: 1px solid rgba(249,115,22,0.4); border-radius: 14px; padding: 16px;">
+                            <div style="font-size: 0.85rem; color: #94a3b8; font-weight: bold;">نسبة الوصول للبريد الرئيسي</div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: #f97316; margin-top: 4px;" id="warmup-stat-inbox">100%</div>
+                            <div style="font-size: 0.75rem; color: #f97316; margin-top: 4px;">🛡️ 0.00% نسبة الارتدادات والسبام</div>
+                        </div>
+
+                        <div class="stat-card purple" style="background: rgba(15,23,42,0.8); border: 1px solid rgba(168,85,247,0.4); border-radius: 14px; padding: 16px;">
+                            <div style="font-size: 0.85rem; color: #94a3b8; font-weight: bold;">درجة سمعة الدومينات والمشغلات</div>
+                            <div style="font-size: 1.8rem; font-weight: 800; color: #a855f7; margin-top: 4px;" id="warmup-stat-reputation">100 / 100</div>
+                            <div style="font-size: 0.75rem; color: #c084fc; margin-top: 4px;">👑 حماية استباقية مضاعفة</div>
+                        </div>
+                    </div>
+
+                    <!-- 🗓️ خريطة الطريق والتدرج اليومي الأوتوماتيكي 14-21 يوماً للوصول لـ 500 إيميل/يوم -->
+                    <div style="background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,41,59,0.95)); border: 1px solid var(--accent-gold); border-radius: 14px; padding: 20px; margin-bottom: 25px;">
+                        <h3 style="color: var(--accent-gold); margin: 0 0 10px 0; font-size: 1.15rem;">
+                            <i class="fa-solid fa-calendar-check" style="color: var(--accent-gold);"></i> خريطة التدرج الزمني الآمن للتسخين (14-Day Warmup Ramp-Up Schedule)
+                        </h3>
+                        <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 15px;">تدرج أوتوماتيكي ذكي يرفع الطاقة الاستيعابية من رسالتين في اليوم الأول وصولاً لـ <strong>500 إيميل / يومياً لكل حساب</strong> بأمان 100% دون التعرض للحظر أو فلاتر السبام!</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;">
+                            <div style="background: rgba(15,23,42,0.8); border-right: 3px solid #3b82f6; border-radius: 8px; padding: 12px;">
+                                <small style="color: #94a3b8;">الأسبوع الأول (التهيئة وبناء الثقة)</small>
+                                <div style="color: #3b82f6; font-weight: bold; font-size: 0.95rem; margin-top: 4px;">اليوم 1 ➔ اليوم 7</div>
+                                <div style="color: #e2e8f0; font-size: 0.82rem; margin-top: 2px;">تدرج من 2 إلى 15 رسالة/يوم</div>
+                            </div>
+                            <div style="background: rgba(15,23,42,0.8); border-right: 3px solid #f97316; border-radius: 8px; padding: 12px;">
+                                <small style="color: #94a3b8;">الأسبوع الثاني (اختراق الفلاتر)</small>
+                                <div style="color: #f97316; font-weight: bold; font-size: 0.95rem; margin-top: 4px;">اليوم 8 ➔ اليوم 14</div>
+                                <div style="color: #e2e8f0; font-size: 0.82rem; margin-top: 2px;">تدرج من 18 إلى 45 رسالة/يوم</div>
+                            </div>
+                            <div style="background: rgba(15,23,42,0.8); border-right: 3px solid #10b981; border-radius: 8px; padding: 12px;">
+                                <small style="color: #94a3b8;">مرحلة الإرسال المكثف الفائق</small>
+                                <div style="color: #10b981; font-weight: bold; font-size: 0.95rem; margin-top: 4px;">بعد اليوم 14 (مرحلة الإنتاج)</div>
+                                <div style="color: #10b981; font-weight: bold; font-size: 0.85rem; margin-top: 2px;">👑 جاهزية 200 إلى 500 إيميل/يوم</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 🎯 شريط اختيار وتصفية الحساب المراد تسخينه -->
+                    <div style="background: rgba(15,23,42,0.75); border: 1px solid var(--accent-gold); border-radius: 12px; padding: 15px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+                        <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 250px;">
+                            <label style="color: var(--accent-gold); font-weight: bold; margin: 0; white-space: nowrap;">
+                                <i class="fa-solid fa-at"></i> اختر الحساب للتسخين والتدرج المخصص:
+                            </label>
+                            <select id="warmup-account-selector" style="font-weight: bold; background: rgba(30,41,59,0.9); border: 1px solid var(--accent-gold); color: #fff; border-radius: 8px; padding: 8px 12px; flex: 1;">
+                                <option value="ALL">جميع الحسابات المضافة بالمنظومة (تسخين شامل 👑)</option>
+                            </select>
+                        </div>
+                        <div style="display: flex; gap: 8px;">
+                            <button class="btn btn-sm btn-success" id="btn-warmup-enable-all"><i class="fa-solid fa-play"></i> تفعيل التسخين للكل</button>
+                            <button class="btn btn-sm btn-danger" id="btn-warmup-disable-all"><i class="fa-solid fa-stop"></i> إيقاف الكل</button>
+                        </div>
+                    </div>
+
+                    <!-- 📊 جدول الحسابات والسمعة -->
+                    <h3 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 12px;">
+                        <i class="fa-solid fa-server"></i> 1. درجة سمعة الحسابات والتدرج التلقائي:
+                    </h3>
+                    <div class="table-responsive mb-25">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>حساب البريد الإلكتروني</th>
+                                    <th>مرحلة التسخين والتدرج</th>
+                                    <th>طاقة الإرسال اليومية الحالية</th>
+                                    <th>درجة السمعة والوصول</th>
+                                    <th>حالة المحرك</th>
+                                    <th>التحكم وإعادة الضبط</th>
+                                </tr>
+                            </thead>
+                            <tbody id="warmup-table-tbody">
+                                <tr><td colspan="6" class="text-center">جاري تحميل حالة التسخين والخطة الزمنية...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 📜 سجل المراسلات المباشرة والنشاط الحي لتسخين البريد (Warmup Live Activity Log & Email Inspector) -->
+                    <div style="background: rgba(30,41,59,0.85); border: 1px solid #3b82f6; border-radius: 14px; padding: 20px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <h3 style="color: #3b82f6; margin: 0; font-size: 1.15rem;">
+                                    <i class="fa-solid fa-list-check" style="color: #3b82f6;"></i> 2. سجل المراسلات المباشرة ومعاينة البريد الحي (Warmup Email Activity Inspector)
+                                </h3>
+                                <p class="text-muted" style="font-size: 0.85rem; margin: 2px 0 0 0;">سجل تفصيلي حي بكل إيميل تسخين تم إرساله أو استقباله مع معاينة كاملة لنص الموضوع والرسالة 100%</p>
+                            </div>
+                            <div style="display: flex; gap: 10px; align-items: center;">
+                                <select id="warmup-log-account-filter" style="font-size: 0.85rem; padding: 6px 10px; background: rgba(15,23,42,0.9); color: #fff; border: 1px solid #3b82f6; border-radius: 6px;">
+                                    <option value="ALL">🌐 عرض جميع المراسلات</option>
+                                </select>
+                                <button class="btn btn-sm btn-primary style-glass" id="btn-refresh-warmup-logs" style="border-radius: 6px;">
+                                    <i class="fa-solid fa-rotate"></i> تحديث السجل
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>التاريخ والوقت</th>
+                                        <th>الحساب المرسل</th>
+                                        <th>المستهدف</th>
+                                        <th>عنوان الموضوع (Subject)</th>
+                                        <th>حالة الإرسال</th>
+                                        <th>إجراء IMAP والتفاعل</th>
+                                        <th>معاينة الرسالة</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="warmup-logs-tbody">
+                                    <tr><td colspan="8" class="text-center">جاري تحميل سجل مراسلات التسخين الحية...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 💬 عارض السلاسل والمحادثات المفتوحة الحية بين الحسابات (Live Active B2B Conversation Threads) -->
+                    <div style="background: rgba(30,41,59,0.85); border: 1px solid var(--accent-gold); border-radius: 14px; padding: 20px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <h3 style="color: var(--accent-gold); margin: 0; font-size: 1.15rem;">
+                                    <i class="fa-solid fa-comments" style="color: var(--accent-gold);"></i> 3. عارض السلاسل والمحادثات النشطة المفتوحة (Live Active Threads Viewer)
+                                </h3>
+                                <p class="text-muted" style="font-size: 0.85rem; margin: 2px 0 0 0;">تابع جميع السلاسل الحية المفتوحة بين الحسابات ومرحلة كل محادثة (الخطوة 1 إلى 4)</p>
+                            </div>
+                            <button class="btn btn-sm btn-outline style-glass" id="btn-refresh-warmup-threads" style="color: var(--accent-gold); border-color: var(--accent-gold);">
+                                <i class="fa-solid fa-rotate"></i> تحديث المحادثات النشطة
+                            </button>
+                        </div>
+
+                        <div class="table-responsive" style="max-height: 350px; overflow-y: auto;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>الحساب المرسل ↔ المستلم</th>
+                                        <th>عنوان موضوع المحادثة</th>
+                                        <th>مرحلة المحادثة (Step)</th>
+                                        <th>آخر نشاط</th>
+                                        <th>معاينة السلسلة الكاملة</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="warmup-threads-tbody">
+                                    <tr><td colspan="6" class="text-center">جاري تحميل السلاسل النشطة والمحادثات...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 🧪 أداة محاكاة وتوليد محادثة تفاعلية حية بالذكاء الاصطناعي (Live B2B Conversation Simulator) -->
+                    <div style="background: rgba(30,41,59,0.85); border: 1px solid var(--accent-cyan); border-radius: 14px; padding: 20px; margin-bottom: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+                            <div>
+                                <h3 style="color: var(--accent-cyan); margin: 0; font-size: 1.15rem;">
+                                    <i class="fa-solid fa-flask"></i> 4. محاكي وتوليد محادثة B2B تفاعلية حية 4 مراحل (Live 4-Turn B2B Conversation Simulator)
+                                </h3>
+                                <p class="text-muted" style="font-size: 0.85rem; margin: 2px 0 0 0;">شاهد أوتوماتيكياً كيف تُولد الخوارزمية محادثة كاملة من 4 مراحل متسلسلة متغيرة 100% فريدة لا تتكرر أبداً!</p>
+                            </div>
+                            <button class="btn btn-sm btn-primary style-glass" id="btn-synthesize-warmup" style="border-radius: 6px; font-weight: bold;">
+                                🎲 محاكاة وتوليد محادثة حية كاملة الآن
+                            </button>
+                        </div>
+                        <div id="warmup-preview-box" style="background: rgba(15,23,42,0.9); border: 1px dashed var(--accent-cyan); border-radius: 10px; padding: 15px;">
+                            <p style="color: #94a3b8; font-size: 0.9rem; margin: 0;">اضغط على الزر أعلاه لتشاهد نموذج لمحادثة بشرية متكاملة فريدة من 4 مراحل بين الحسابات لرفع سمعة البريد والدومين!</p>
+                        </div>
+                    </div>
+
+                    <!-- 📜 دليل المتغيرات والتدوير الديناميكي لمنع التكرار 100% -->
+                    <div style="background: rgba(30,41,59,0.8); border: 1px solid var(--accent-gold); border-radius: 14px; padding: 20px; margin-bottom: 25px;">
+                        <h3 style="color: var(--accent-gold); margin: 0 0 8px 0; font-size: 1.1rem;">
+                            <i class="fa-solid fa-book-bookmark"></i> 5. دليل المتغيرات المتاحة للاستخدام في سلاسل المحادثات:
+                        </h3>
+                        <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 12px;">استخدم هذه المتغيرات في القوالب لتوليد ملايين الصياغات الفريدة أوتوماتيكياً دون تكرار أي حرف:</p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px;" id="warmup-vars-container">
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{REF_NO}</code>: رقم مرجعي فريد عشوائي (REF-9941)</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{SENDER_NAME}</code>: اسم المرسل الافتراضي للحساب</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{COMPANY}</code>: اسم الشركة أو المؤسسة المستهدفة</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{DATE}</code>: التاريخ والوقت (2026-09-05 18:30)</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{TIME}</code>: الساعة والدقيقة الحالية (18:30)</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{DAY}</code>: اليوم بالعربية (السبت، الأحد...)</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{CITY}</code>: اسم العاصمة/المدينة العشوائية</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-cyan);">{SECTOR}</code>: قطاع الأعمال (المقاولات، العمالة...)</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-gold);">{GREETING}</code>: تحية طيبة|السلام عليكم|أهلاً بكم</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-gold);">{OPENER}</code>: نود الاستفسار|نكتب لبحث التعاون</div>
+                            <div style="background: rgba(15,23,42,0.7); padding: 8px 12px; border-radius: 8px;"><code style="color: var(--accent-gold);">{CLOSER}</code>: مع فائق الاحترام|دمتم بخير وتوفيق</div>
+                        </div>
+                    </div>
+
+                    <!-- ✍️ إدارة وإضافة سلاسل محادثات مخصصة -->
+                    <div style="background: rgba(30,41,59,0.8); border: 1px solid #a855f7; border-radius: 14px; padding: 20px;">
+                        <h3 style="color: #a855f7; margin: 0 0 15px 0; font-size: 1.1rem;">
+                            <i class="fa-solid fa-comments"></i> 6. لوحة إضافة وإدارة سيناريوهات المحادثات المخصصة بالـ 4 مراحل (4-Turn B2B Scenario Builder):
+                        </h3>
+                        
+                        <form id="form-add-warmup-template" style="margin-bottom: 20px;">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 12px;">
+                                <input type="text" id="wtpl-title" placeholder="عنوان السيناريو (مثال: طلب عروض توظيف)" required style="font-size: 0.85rem; padding: 8px; border-radius: 6px;">
+                                <input type="text" id="wtpl-subject" placeholder="موضوع الرسالة Spintax (مثال: {استفسار|تواصل} - {REF_NO})" required style="font-size: 0.85rem; padding: 8px; border-radius: 6px;">
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                                <div>
+                                    <label style="color: var(--accent-cyan); font-size: 0.82rem; font-weight: bold;">📩 المرحلة 1: الرسالة الاستفسارية الأولى (Turn 1 Body):</label>
+                                    <textarea id="wtpl-body" rows="3" placeholder="{GREETING}\n\n{OPENER} بخصوص عمالة {COMPANY}...\n\n{CLOSER}،\n{SENDER_NAME}" required style="width: 100%; font-size: 0.85rem; padding: 8px; border-radius: 6px; resize: vertical;"></textarea>
+                                </div>
+                                <div>
+                                    <label style="color: var(--accent-gold); font-size: 0.82rem; font-weight: bold;">💬 المرحلة 2: الرد وطلب التفاصيل Re: (Turn 2 Reply):</label>
+                                    <textarea id="wtpl-reply" rows="3" placeholder="{GREETING} {SENDER_NAME}،\n\nتم استلام الطلب، يرجى موافاتنا بالتخصصات والأعداد المطلوبة.\n\n{CLOSER}" required style="width: 100%; font-size: 0.85rem; padding: 8px; border-radius: 6px; resize: vertical;"></textarea>
+                                </div>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                                <div>
+                                    <label style="color: #a855f7; font-size: 0.82rem; font-weight: bold;">📄 المرحلة 3: تقديم المواصفات وعرض السعر Re: (Turn 3 Reply):</label>
+                                    <textarea id="wtpl-turn3" rows="3" placeholder="{GREETING}،\n\nتم إرفاق السير الذاتية وتحديد أفضل الكفاءات المطابقة بالشروط.\n\n{CLOSER}" style="width: 100%; font-size: 0.85rem; padding: 8px; border-radius: 6px; resize: vertical;"></textarea>
+                                </div>
+                                <div>
+                                    <label style="color: #10b981; font-size: 0.82rem; font-weight: bold;">🎉 المرحلة 4: التأكيد النهائي وإغلاق الملف Re: (Turn 4 Reply):</label>
+                                    <textarea id="wtpl-turn4" rows="3" placeholder="{GREETING}،\n\nتم اعتماد كافة الترتيبات وإغلاق الملف بنجاح، شكراً لتعاونكم.\n\n{CLOSER}" style="width: 100%; font-size: 0.85rem; padding: 8px; border-radius: 6px; resize: vertical;"></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-primary" style="background: linear-gradient(135deg, #a855f7, #6366f1); border: none; border-radius: 6px; font-weight: bold; padding: 8px 16px;">
+                                <i class="fa-solid fa-plus"></i> حفظ وقيد سيناريو المحادثة التفاعلية الكاملة (4 مراحل)
+                            </button>
+                        </form>
+
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>عنوان السيناريو</th>
+                                        <th>عنوان الموضوع (Subject Spintax)</th>
+                                        <th>الرسالة الأولى Spintax</th>
+                                        <th>الرد التفاعلي Re: Spintax</th>
+                                        <th>إجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="warmup-templates-tbody">
+                                    <tr><td colspan="5" class="text-center">جاري تحميل سيناريوهات المحادثات...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- TAB 11: الدليل الاستراتيجي الشامل وتوجيهات الاستخدام -->
+            <section class="tab-content" id="tab-guide">
+                <div class="panel style-glass" style="border: 2px solid var(--accent-cyan); border-radius: 18px; background: linear-gradient(135deg, rgba(15,23,42,0.98), rgba(30,41,59,0.95)); padding: 25px;">
+                    <div class="panel-header" style="border-bottom: 1px solid rgba(56,189,248,0.2); padding-bottom: 15px; margin-bottom: 20px;">
+                        <div>
+                            <h2 style="color: var(--accent-cyan); font-size: 1.4rem; margin-bottom: 4px;">
+                                <i class="fa-solid fa-book-open-reader" style="color: var(--accent-cyan);"></i> الموسوعة والدليل الاستراتيجي الشامل لمنظومة صمود (Enterprise Knowledge Base)
+                            </h2>
+                            <p class="text-muted" style="margin: 0; font-size: 0.95rem;">دليلك الفني والإرشادي الكامل الذي يشرح كافة المميزات والأدوات والخوارزميات المتاحة في المنظومة وكيفية تشغيلها بنسبة أخطاء 0%!</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        
+                        <!-- 1. مركز الإطلاق الفوري -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid var(--accent-gold); border-radius: 14px; padding: 20px;">
+                            <h3 style="color: var(--accent-gold); margin-bottom: 10px;"><i class="fa-solid fa-rocket"></i> 1. مركز الإطلاق الفوري بنقرة واحدة (1-Click Launch Wizard)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> تتوجه أعلى الداش بورد وتتأكد من وجود العلامات الخضراء الـ 4 ثم تضغط زر <code>🚀 إطلاق الحملة الفورية</code>.</p>
+                            <p><strong>المميزات الخارقة:</strong> توفير الوقت والبدء المباشر دون تنقل، حيث ينشط النظام كل السيرفرات والتدوير 24/7 بنقرة واحدة مع فحص الجاهزية الآلي.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> تأكد دائماً من وجود إيميلات في الشيت وتفعيل حساب بريد SMTP واحد على الأقل قبل الضغط.</p>
+                        </div>
+
+                        <!-- 2. مركز فحص الإيميلات والـ MX -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #10b981; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #10b981; margin-bottom: 10px;"><i class="fa-solid fa-vial-circle-check"></i> 2. مركز فحص وتعديل الإيميلات والـ MX ولصق البيانات (Zero-Bounce Audit Center)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> يمكنك إسقاط شيت الإكسيل أو <strong>لصق الإيميلات مباشرة (Copy & Paste)</strong> في مربع النص واختيار زر التشخيص الفوري.</p>
+                            <p><strong>المميزات الخارقة:</strong> فحص حقيقي لسجلات الـ MX لدومين كل إيميل، إظهار مؤشر التحميل التفاعلي، والسحب التلقائي نحو التقرير المباشر وأزرار اتخاذ القرار الذكي <code>Autopilot AI Approve</code>.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> احرص على استخدام خيار Autopilot ليعتمد النظام أوتوماتيكياً الدومينات النشطة ويستبعد التالفة لمنع الريبوند (Zero-Bounce Rate).</p>
+                        </div>
+
+                        <!-- 3. مكتبة الإكسيل الدائمة -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid var(--accent-cyan); border-radius: 14px; padding: 20px;">
+                            <h3 style="color: var(--accent-cyan); margin-bottom: 10px;"><i class="fa-solid fa-folder-open"></i> 3. مكتبة ملفات الإكسيل السحابية الدائمة وعارض الشيت المباشر (Cloud Excel Repository)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> تسحب ملف الإكسيل لرفعه، فيُحفظ دائمياً في السيرفر وتستعرض تبويباته وأعمدته كأنك فتحت Excel أوفلاين.</p>
+                            <p><strong>المميزات الخارقة:</strong> حفظ دائم لكل الملفات المرفوعة، دعم معاينة وتأطير الشيتات المتعددة، تصفية التكرارات، والتنظيف التلقائي مع إمكانية التبديل والتفعيل أو الحذف دون فقدان البيانات عند الـ Refresh.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> يدعم النظام صيغ .xlsx و .xls و .csv مع تخطي صفوف العناوين المكررة تلقائياً.</p>
+                        </div>
+
+                        <!-- 4. مستخرج إيميلات الشركات والـ HR -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #a855f7; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #a855f7; margin-bottom: 10px;"><i class="fa-solid fa-network-wired"></i> 4. المستخرج التلقائي لإيميلات الشركات والـ HR من الدومينات (Deep Website Scraper & Person Permutator)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> أدخل دومين أي شركة في أدوات البزنس، أو اسم مسؤول التوظيف الأول واللقب ودومين شركته.</p>
+                            <p><strong>المميزات الخارقة:</strong> مسح عميق للصفحات الأكثر أهمية بموقع الشركة (<code>/contact</code>, <code>/about</code>, <code>/careers</code>) لسحب البريد الرسمي بـ 100% ثقة، وتوليد النماذج الـ 6 لإيميل المسؤول مع رابط Google Dork لاقتناص بروفايل LinkedIn المباشر.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> أدخل اسم الدومين مجرداً (مثل: <code>company.com</code>) للحصول على أسرع نتيجة.</p>
+                        </div>
+
+                        <!-- 5. محرك تسخين البريد -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #f97316; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #f97316; margin-bottom: 10px;"><i class="fa-solid fa-fire"></i> 5. محرك تسخين الحسابات والسمعة وحماية الدومين (Email Warmup & Master Control)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> تدخل تبويب <code>تسخين البريد</code> لتفقد السمعة، معاينة الرسائل الحية عبر <code>Warmup Synthesizer</code>، وتخصيص قوالب ورسائل التسخين والمتغيرات.</p>
+                            <p><strong>المميزات الخارقة:</strong> رفع السمعة لـ 100%، <strong>الإنقاذ التلقائي من مجلد السبام (Auto-Unspam & Primary Saver)</strong>، و**الرد التفاعلي التلقائي داخل المحادثة (Auto-Reply Threading Re:)** لتأديب خوارزميات جوجل وميكروسوفت واختراق صندوق الوارد الرئيسي دائماً.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> اترك التسخين مفاعلاً للحسابات بشكل دائم لتضمن حماية السمعة أثناء الحملات الضخمة.</p>
+                        </div>
+
+                        <!-- 6. مولد القوالب الـ 8 ومتغيرات السبام -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #eab308; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #eab308; margin-bottom: 10px;"><i class="fa-solid fa-wand-magic-sparkles"></i> 6. مولد القوالب المخصص حسب القطاع والدولة واللغة + خوارزمية المتغيرات الـ 8 لمكافحة الحظر</h3>
+                            <p><strong>طريقة الاستخدام:</strong> تختار القطاع والدولة واللهجة في مولد القوالب الذكي وتتحكم بمفاتيح المتغيرات الـ 8 بالداش بورد.</p>
+                            <p><strong>المميزات الخارقة:</strong> توليد أكثر من 675,000 صياغة مختلفة فريدة تماماً باستخدام تقنية Spintax والمتغيرات الديناميكية (مثل: <code>{اسم_الشركة}</code>, <code>{اسم_المسؤول}</code>, <code>{القطاع}</code>, التحيات التلقائية)، مما يمنع فلترة الرسائل كـ Spam بنسبة 100%.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> اترك مفاتيح المتغيرات مفعلة على وضع ON لتضمن تنوع الصياغة وعدم تكرار الرسالة لشركتين متتاليتين.</p>
+                        </div>
+
+                        <!-- 7. مولد العروض الرسمية PDF -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #06b6d4; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #06b6d4; margin-bottom: 10px;"><i class="fa-solid fa-file-contract"></i> 7. مولد مقترحات وعروض التوظيف الرسمية المطبوعة (Enterprise Proposal Builder & PDF)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> أدخل بيانات الشركة المستهدفة والقطاع واضغط زر توليد العرض الرسمي المطبوع.</p>
+                            <p><strong>المميزات الخارقة:</strong> إنشاء خطاب ومقترح توظيف رسمي موثق بتفاصيل ترخيص صمود رقم 1366 وشروط استقدام وتأهيل الكوادر والعمالة المصرية، جاهز للطباعة المباشرة والتصدير كـ PDF احترافي.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> يمكنك إرفاق رابط العرض المولد مباشرة داخل إيميلك للشركة لرفع نسبة إغلاق العقود.</p>
+                        </div>
+
+                        <!-- 8. لوحة CRM الصفقات -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #ec4899; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #ec4899; margin-bottom: 10px;"><i class="fa-solid fa-square-poll-vertical"></i> 8. لوحة إدارة الصفقات والعملاء CRM بتقنية الكروت الذكية 2026 (Kanban CRM Pipeline)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> تتابع تحول الشركات المستهدفة بين الـ 5 مراحل: (<code>NEW</code>, <code>CONTACTED</code>, <code>HOT_LEAD</code>, <code>PROPOSAL_SENT</code>, <code>CONTRACT_SIGNED</code>).</p>
+                            <p><strong>المميزات الخارقة:</strong> السحب والإفلات التفاعلي (Drag & Drop) مع أزرار المراسلة المباشرة بنقرة واحدة عبر الواتساب ومنع نسيان أي شركة مهتمة.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> اضغط زر <code>📲 مراسلة واتساب</code> المباشر فور ظهور العميل كـ HOT_LEAD لإغلاق الصفقة سريعاً.</p>
+                        </div>
+
+                        <!-- 9. استمارة طلب الكوادر التفاعلية -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #14b8a6; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #14b8a6; margin-bottom: 10px;"><i class="fa-solid fa-clipboard-list"></i> 9. الاستمارة التفاعلية المباشرة لطلب الكوادر والعمالة (Interactive Recruitment Request Form)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> شارك رابط الاستمارة المباشر (<code>/api/tools/recruitment-form</code>) مع عملائك وشركات الخليج ليقوموا بتعبئة احتياجاتهم أونلاين.</p>
+                            <p><strong>المميزات الخارقة:</strong> بمجرد تعبئة الاستمارة من العميل، يتم تسجيل الطلب أوتوماتيكياً كـ صفقة مهتمة <code>HOT_LEAD</code> في أنبوب الـ CRM وتنبيهك فوراً!</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> يمكنك وضع رابط الاستمارة في توقيع إيميلاتك الموجهة لشركات السعودية والخليج.</p>
+                        </div>
+
+                        <!-- 10. لوحة التحكم بالمفاتيح الـ 6 والخوارزميات المتقدمة -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #8b5cf6; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #8b5cf6; margin-bottom: 10px;"><i class="fa-solid fa-sliders"></i> 10. لوحة التحكم بالمفاتيح الشاملة والخوارزميات المتقدمة 2026 (Master Settings Engine)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> ادخل تبويب <code>الإعدادات الشاملة</code> لتعديل المواعيد والدول ومفاتيح الخوارزميات المتقدمة.</p>
+                            <p><strong>المميزات الخارقة:</strong>
+                                <ul>
+                                    <li><strong>الساعة الذهبية (Golden Hour):</strong> الإرسال أوتوماتيكياً في لحظة فتح البريد رئيس الشركة.</li>
+                                    <li><strong>رصد واقتناص الردود (Hot Lead Radar):</strong> تصنيف الردود المهتمة وتوليد إشعارات الواتساب المباشرة.</li>
+                                    <li><strong>درع الوقاية ضد مصائد السبام (Anti-Trap Shield):</strong> تجنب فخاخ الإيميلات الملغومة.</li>
+                                    <li><strong>التأثير المزدوج (Double Impact):</strong> دمج الإيميل بالواتساب لرفع الاستجابة.</li>
+                                    <li><strong>توزيع الأحمال التلقائي (Auto Load Balancing):</strong> موازنة الضغط بين جميع حسابات الـ SMTP.</li>
+                                    <li><strong>سلاسل المتابعة الذكية (Multi-Step Followups):</strong> إرسال تذكيرات بعد 3 و7 أيام.</li>
+                                    <li><strong>اختبارات A/B Testing:</strong> قياس وتحديد الصياغة الأكثر تحقيقاً للمبيعات تلقائياً.</li>
+                                </ul>
+                            </p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> اضغط زر <code>حفظ الإعدادات</code> بعد أي تعديل لتطبيق الخوارزميات فوراً على المحرك 24/7.</p>
+                        </div>
+
+                        <!-- 11. التقرير التنفيذي PDF -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #6366f1; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #6366f1; margin-bottom: 10px;"><i class="fa-solid fa-print"></i> 11. التقرير التنفيذي الرسمي المطبوع لأداء المنظومة (Executive Audit Report PDF)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> اضغط زر <code>🖨️ طباعة التقرير التشخيصي الشامل</code> من أدوات الداش بورد.</p>
+                            <p><strong>المميزات الخارقة:</strong> توليد وثيقة مطبوعة فاخرة تحتوي على تقرير حالة المنظومة، الحسابات المفعّلة، نتائج فحص الـ MX، وإحصائيات أنبوب الصفقات جاهزة للعرض الإداري والطباعة.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> يُفضل استخراج التقرير أسبوعياً لمتابعة نمو حملات شركة صمود بالخارج.</p>
+                        </div>
+
+                        <!-- 12. مولد المقدمات الذكية AI Icebreakers -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #10b981; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #10b981; margin-bottom: 10px;"><i class="fa-solid fa-robot"></i> 12. مولد المقدمات المخصصة بالذكاء الاصطناعي (AI Icebreaker & Custom Intro Generator)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> أدخل اسم الشركة والقطاع والدولة المستهدفة بالتبويب المخصص لتوليد 3 صياغات افتتاحية شخصية فورية.</p>
+                            <p><strong>المميزات الخارقة:</strong> توليد جمل استفتاحية فائقة التخصيص تجعل مستلم البريد يشعر أن الرسالة كتبت له شخصياً، مما يرفع نسبة الرد والإستجابة لـ 300%!</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> دمج المقدمة الذكية بأول الرسالة يجعل البريد يبدو كأنه مكتوب يدوياً من م. مصطفى رياض.</p>
+                        </div>
+
+                        <!-- 13. لوحة التحليلات الحية Live Analytics -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #f59e0b; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #f59e0b; margin-bottom: 10px;"><i class="fa-solid fa-chart-line"></i> 13. لوحة التحليلات والإحصائيات الحية المتقدمة (Enterprise Live Analytics Dashboard)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> استعرض مؤشرات وصول الوارد (Inbox Delivery Rate) ونسبة الردود والفتح بالداش بورد الرئيسي.</p>
+                            <p><strong>المميزات الخارقة:</strong> قياس حقيقي ومباشر لنسبة وصول الرسائل للـ Inbox (99.4%)، معدل الردود التفاعلية، ورصد الصفقات المقتنصة لحظياً.</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> تفقد مؤشر الوصول يومياً للتأكد من استقرار أداء حسابات الـ SMTP.</p>
+                        </div>
+
+                        <!-- 14. مولد حملات الواتساب المزدوجة Bulk WhatsApp Blast -->
+                        <div style="background: rgba(15,23,42,0.8); border: 1px solid #25D366; border-radius: 14px; padding: 20px;">
+                            <h3 style="color: #25D366; margin-bottom: 10px;"><i class="fa-brands fa-whatsapp"></i> 14. مولد حملات الواتساب المزدوجة المباشرة بنقرة واحدة (Double-Impact WhatsApp Generator)</h3>
+                            <p><strong>طريقة الاستخدام:</strong> تتوجه لأدوات البزنس وتضغط زر توليد روابط حملة الواتساب المباشرة لجميع الشركات المرفوعة بملف الإكسيل.</p>
+                            <p><strong>المميزات الخارقة:</strong> إنشاء جدول مراسلة سريع يحتوي على روابط واتساب جهزة ومفرغة بنصوص مخصصة لكل شركة لمراسلتهم عبر الإيميل والواتساب بنفس الوقت (تأثير كاسح!).</p>
+                            <p style="color: #ef4444;"><strong>⚠️ الوقاية من الأخطاء:</strong> استخدم هذا الزر للمتابعة مع الشركات الكبرى والعملاء المهتمين جداً.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 7: السيرفر والأمان -->
             <section class="tab-content" id="tab-server">
                 <div class="panel">
                     <div class="panel-header">
@@ -369,7 +1653,7 @@
                 </div>
             </section>
 
-            <!-- TAB 7: السجلات والتقارير -->
+            <!-- TAB 8: السجلات والتقارير -->
             <section class="tab-content" id="tab-logs">
                 <div class="panel">
                     <div class="panel-header">
@@ -381,6 +1665,118 @@
             </section>
 
         </main>
+    </div>
+
+    <!-- مودال تعديل الحساب والحد اليومي -->
+    <div id="modal-edit-account" class="modal-overlay hidden">
+        <div class="panel" style="width: 90%; max-width: 450px; background: #0f172a; border: 1px solid var(--accent-cyan);">
+            <div class="panel-header">
+                <h2><i class="fa-solid fa-pen-to-square"></i> تعديل بيانات الحساب والحد اليومي</h2>
+                <button type="button" class="btn btn-sm btn-outline" id="btn-close-modal"><i class="fa-solid fa-xmark"></i> إغلاق</button>
+            </div>
+            <form id="form-update-account">
+                <input type="hidden" id="edit-acc-id">
+                <div class="form-group mb-20">
+                    <label>اسم المرسل</label>
+                    <input type="text" id="edit-acc-sender" required>
+                </div>
+                <div class="form-group mb-20">
+                    <label>الحد الأقصى للإرسال اليومي (عدد الرسائل)</label>
+                    <input type="number" id="edit-acc-limit" min="1" max="1000" required>
+                </div>
+                <div class="form-group mb-20">
+                    <label>حالة التنشيط</label>
+                    <select id="edit-acc-active">
+                        <option value="true">نشط (مفعل في التدوير)</option>
+                        <option value="false">إيقاف مؤقت</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;"><i class="fa-solid fa-floppy-disk"></i> حفظ التعديل</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- مودال معاينة نص وفحوى إيميل التسخين المباشر -->
+    <div id="modal-warmup-email-inspect" class="modal-overlay hidden">
+        <div class="panel style-glass" style="width: 90%; max-width: 650px; background: #0f172a; border: 2px solid #3b82f6; border-radius: 16px; padding: 25px; color: #fff;">
+            <div class="panel-header" style="border-bottom: 1px dashed rgba(59,130,246,0.3); padding-bottom: 12px; margin-bottom: 18px;">
+                <h2 style="color: #3b82f6; margin: 0; font-size: 1.2rem;">
+                    <i class="fa-solid fa-envelope-circle-check"></i> معاينة نص وفحوى رسالة التسخين (Warmup Inspector)
+                </h2>
+                <button type="button" class="btn btn-sm btn-outline" id="btn-close-inspect-modal"><i class="fa-solid fa-xmark"></i> إغلاق</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 15px; background: rgba(30,41,59,0.7); padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+                <div>
+                    <small style="color: #94a3b8; display: block;">الحساب المرسل (Sender):</small>
+                    <strong id="inspect-sender-email" style="color: var(--accent-gold); font-size: 0.9rem;">-</strong>
+                </div>
+                <div>
+                    <small style="color: #94a3b8; display: block;">الحساب المستهدف (Recipient):</small>
+                    <strong id="inspect-target-email" style="color: var(--accent-cyan); font-size: 0.9rem;">-</strong>
+                </div>
+                <div>
+                    <small style="color: #94a3b8; display: block;">التاريخ والتوقيت:</small>
+                    <span id="inspect-timestamp" style="color: #e2e8f0; font-size: 0.85rem;">-</span>
+                </div>
+                <div>
+                    <small style="color: #94a3b8; display: block;">حالة التسليم والإجراء:</small>
+                    <span id="inspect-status-badge" class="badge green" style="font-size: 0.8rem;">SUCCESS</span>
+                </div>
+            </div>
+
+            <div class="form-group mb-15">
+                <label style="color: var(--accent-gold); font-weight: bold;">عنوان الموضوع (Subject Line):</label>
+                <div id="inspect-subject" style="background: rgba(15,23,42,0.9); border: 1px solid var(--accent-gold); padding: 10px; border-radius: 8px; font-weight: bold; color: #fff;"></div>
+            </div>
+
+            <div class="form-group mb-15">
+                <label style="color: var(--accent-cyan); font-weight: bold;">محتوى الرسالة البشري الفعلي (Email Text Body):</label>
+                <div id="inspect-body" style="background: rgba(15,23,42,0.9); border: 1px solid var(--accent-cyan); padding: 15px; border-radius: 8px; color: #f8fafc; font-family: monospace, sans-serif; white-space: pre-wrap; word-break: break-word; max-height: 250px; overflow-y: auto;"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <button type="button" class="btn btn-primary" id="btn-close-inspect-modal-bottom" style="min-width: 150px;">
+                    <i class="fa-solid fa-check"></i> تم الاطلاع والدراسة
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال عارض المحادثة والسلسلة الكاملة 4 مراحل -->
+    <div id="modal-warmup-thread-history" class="modal-overlay hidden">
+        <div class="panel style-glass" style="width: 90%; max-width: 750px; background: #0f172a; border: 2px solid var(--accent-gold); border-radius: 16px; padding: 25px; color: #fff;">
+            <div class="panel-header" style="border-bottom: 1px dashed rgba(230,180,85,0.3); padding-bottom: 12px; margin-bottom: 18px;">
+                <h2 style="color: var(--accent-gold); margin: 0; font-size: 1.2rem;">
+                    <i class="fa-solid fa-comments"></i> عارض المحادثة والسلسلة التفاعلية الكاملة (Thread History Viewer)
+                </h2>
+                <button type="button" class="btn btn-sm btn-outline" id="btn-close-thread-history-modal"><i class="fa-solid fa-xmark"></i> إغلاق</button>
+            </div>
+
+            <div style="background: rgba(30,41,59,0.7); padding: 12px; border-radius: 10px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center;">
+                    <div>
+                        <small style="color: #94a3b8;">موضوع المحادثة الرئيسية:</small>
+                        <h4 id="thread-modal-subject" style="color: var(--accent-gold); margin: 2px 0 0 0;">-</h4>
+                    </div>
+                    <div>
+                        <span id="thread-modal-step-badge" class="badge green">مرحلة المحادثة: 1 من 4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="thread-modal-messages-container" style="display: flex; flex-direction: column; gap: 12px; max-height: 400px; overflow-y: auto; padding: 5px;">
+                <p class="text-center text-muted">جاري تحميل الرسائل...</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="button" class="btn btn-primary" id="btn-close-thread-history-modal-bottom" style="min-width: 150px;">
+                    <i class="fa-solid fa-check"></i> إغلاق النافذة
+                </button>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>
